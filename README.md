@@ -33,7 +33,9 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 <a href="https://t.me/KayzuSupporrt"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/kayzuchannel"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
 
 
-##
+## <details>
+  <summary><b>© Credits</b></summary>
+
 
 🔰 **BIG THANKS TO**
 
