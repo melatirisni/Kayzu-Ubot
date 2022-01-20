@@ -34,7 +34,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 
 <details>
-  <summary><b>© Credits</b></summary>
+  <summary><b>© CREDITS</b></summary>
 
 
 🔰 **BIG THANKS TO**
