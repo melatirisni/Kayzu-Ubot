@@ -49,7 +49,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 <a href="https://t.me/mrismanaziz"><img src="https://img.shields.io/badge/Risman-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
 <a href="https://t.me/skijuu"><img src="https://img.shields.io/badge/Skyzu-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
-<a href="https://t.me/Kayzu"><img src="https://img.shields.io/badge/Kayzu-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
+<a href="https://t.me/Kayzuuuuu"><img src="https://img.shields.io/badge/Kayzu-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
 <a href="https://t.me/pikyus1"><img src="https://img.shields.io/badge/Sendi-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
 <a href="https://t.me/zxcskyy"><img src="https://img.shields.io/badge/Kyy-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
 <a href="https://t.me/SilenceSpe4ks"><img src="https://img.shields.io/badge/Ari-%230088cc.svg?&style=for-the-badge&logo=telegram&logoColor=white" /></br> 
