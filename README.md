@@ -1,4 +1,4 @@
-<h2 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡</h2>
+<h3 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡</h3>
 
 <p align="center">
     <a href="https://github.com/Kayzyu/Kayzu-Ubot/commits/Kayzu-Ubot"><img src="https://img.shields.io/github/last-commit/Kayzyu/Kayzu-Ubot?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
