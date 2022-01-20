@@ -40,4 +40,5 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 *   [Sendi](https://github.com/SendiAp/Rose-Userbot)   Rose-Userbot
 *   [Skyzu](https://github.com/Skyzu/skyzu-userbot)   skyzu-userbot
 *   [Kayzu](https://github.com/Kayzyu/Kayzu-Ubot)   Kayzu-Ubot
+*   [Risman](https://github.com/mrismanaziz/Man-Userbot)  Man-Userbot
 *   DAN TERIMAKASIH KEPADA USERBOT LAINNYA
