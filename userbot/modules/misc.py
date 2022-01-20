@@ -110,6 +110,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
+        "*I'am Using": ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡
         "┏━━━━━━━━━━━━━━━━━━━━━━━\n"
         "⎆ **ʀᴇᴘᴏ ᴜʙᴏᴛ :** [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)\n"
         "⎆ **ᴏᴡɴᴇʀ ʙᴏᴛ :** [ᴋᴀʏᴢᴜ](t.me/Kayzuuuuu)\n"
