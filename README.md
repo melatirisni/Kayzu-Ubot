@@ -42,6 +42,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 *   [Skyzu](https://github.com/Skyzu/skyzu-userbot)   skyzu-userbot
 *   [Kayzu](https://github.com/Kayzyu/Kayzu-Ubot)   Kayzu-Ubot
 *   [Risman](https://github.com/mrismanaziz/Man-Userbot)  Man-Userbot
+*   [Vicky](https://github.com/vckyou/Geez-Userbot)  Geez-Userbot
 *   DAN TERIMAKASIH KEPADA USERBOT LAINNYA
 
 ## 
