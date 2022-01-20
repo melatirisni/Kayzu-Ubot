@@ -1,4 +1,4 @@
-<h2 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡</h2>
+<h3 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡</h3>
 
 
 <p align="center">
