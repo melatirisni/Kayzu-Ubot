@@ -81,7 +81,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern=r"^\.jamt(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.jamet3(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -117,6 +117,6 @@ CMD_HELP.update({
     \n↳ : Cobain aja\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.hina`\
     \n↳ : Cobain aja\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.jamt`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.jamet3`\
     \n↳ : Cobain aja."
 })
