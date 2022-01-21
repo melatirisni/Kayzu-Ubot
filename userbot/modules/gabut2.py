@@ -15,7 +15,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
+@register(outgoing=True, pattern='^.syg(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
@@ -40,9 +40,9 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "oi": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Kayzu`\
+    "gabut2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Kayzu`\
     \n↳ : perkenalan Kayzu\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sayang`\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.syg`\
     \n↳ : Gombalan maut`\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.semangat`\
     \n↳ : Jan Lupa Semangat."
