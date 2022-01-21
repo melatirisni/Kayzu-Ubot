@@ -18,11 +18,11 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
-    await typew.edit("`𝙒𝙤𝙞𝙞𝙞 𝘼𝙙𝙢𝙞𝙣 𝙂𝙞𝙫𝙚𝙬𝙚`")
+    await typew.edit("`Syarat Ikut Gipeewey`")
     sleep(2)
-    await typew.edit("`𝘼𝙙𝙢𝙞𝙣 𝙏𝙪𝙧𝙪𝙣𝙞𝙣 𝙂𝙞𝙫𝙚𝙬𝙚`")
+    await typew.edit("`Gcast Minimal 10 Grup`")
     sleep(1)
-    await typew.edit("`𝙎𝙚𝙢𝙤𝙜𝙖 𝘿𝙖𝙥𝙚𝙩 𝙂𝙞𝙫𝙚𝙬𝙚`")
+    await typew.edit("`Naik Os, Dan Ss Bukti Gcast`")
 
 
 @register(outgoing=True, pattern='^.uno(?: |$)(.*)')
@@ -44,3 +44,4 @@ CMD_HELP.update({
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.uno`\
     \n↳ : Cobain Sendiri."
 })
+
