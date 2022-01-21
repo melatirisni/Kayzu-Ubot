@@ -1,3 +1,6 @@
+#create by : @Kayzuuuuu,@Contoldisini
+#
+
 from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
@@ -31,9 +34,9 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`𝙆𝙖𝙠𝙠𝙠 👉👈`")
     sleep(2)
-    await typew.edit("`𝘽𝙚𝙬𝙖𝙣 𝙐𝙣𝙤 𝙮𝙪𝙠 👉👈`")
+    await typew.edit("`𝘽𝙚𝙬𝙖𝙣 𝙐𝙣𝙤 𝙮𝙪𝙠 🙈`")
     sleep(1)
-    await typew.edit("`𝙔𝙖𝙣𝙜 𝙆𝙖𝙡𝙖𝙝 𝙋𝙞𝙣𝙙𝙖𝙝 𝘼𝙜𝙖𝙢𝙖 😁👉👈`")
+    await typew.edit("`𝙔𝙖𝙣𝙜 𝙆𝙖𝙡𝙖𝙝 𝙋𝙞𝙣𝙙𝙖𝙝 𝘼𝙜𝙖𝙢𝙖 🙊`")
 
 
 CMD_HELP.update({
@@ -44,3 +47,4 @@ CMD_HELP.update({
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.uno`\
     \n↳ : Cobain Sendiri."
 })
+
