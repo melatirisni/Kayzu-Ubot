@@ -18,22 +18,22 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
-    await typew.edit("`Syarat Ikut Gipeewey`")
+    await typew.edit("`𝙎𝙮𝙖𝙧𝙖𝙩 𝙄𝙠𝙪𝙩 𝙂𝙞𝙥𝙚𝙚𝙬𝙚𝙮`")
     sleep(2)
-    await typew.edit("`Gcast Minimal 10 Grup`")
+    await typew.edit("`𝙂𝙘𝙖𝙨𝙩 𝙈𝙞𝙣𝙞𝙢𝙖𝙡 10 𝙂𝙧𝙪𝙥`")
     sleep(1)
-    await typew.edit("`Naik Os, Dan Ss Bukti Gcast`")
+    await typew.edit("`𝙉𝙖𝙞𝙠 𝙊𝙨, 𝘿𝙖𝙣 𝙎𝙨 𝘽𝙪𝙠𝙩𝙞 𝙂𝙘𝙖𝙨𝙩`")
 
 
 @register(outgoing=True, pattern='^.uno(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
-    await typew.edit("`Pertama-tama kamu cantik`")
+    await typew.edit("`𝙆𝙖𝙠𝙠𝙠 👉👈`")
     sleep(2)
-    await typew.edit("`Kedua kamu manis`")
+    await typew.edit("`𝘽𝙚𝙬𝙖𝙣 𝙐𝙣𝙤 𝙮𝙪𝙠 👉👈`")
     sleep(1)
-    await typew.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
+    await typew.edit("`𝙔𝙖𝙣𝙜 𝙆𝙖𝙡𝙖𝙝 𝙋𝙞𝙣𝙙𝙖𝙝 𝘼𝙜𝙖𝙢𝙖 😁👉👈`")
 
 
 CMD_HELP.update({
@@ -44,3 +44,4 @@ CMD_HELP.update({
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.uno`\
     \n↳ : Cobain Sendiri."
 })
+
