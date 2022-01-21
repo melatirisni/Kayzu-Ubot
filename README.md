@@ -7,7 +7,7 @@
 
 
 <p align="center">
-    <a href="https://github.com/Kayzyu/Kayzu-Ubot/commits/Kayzu-Ubot"><img src="https://img.shields.io/github/last-commit/Kayzyu/Kayzu-Ubot?color=ff0000&logo=github&logoColor=ffffff&style=for-the-badge" /></a>
+    <a href="https://github.com/Kayzyu/Kayzu-Ubot/commits/Kayzu-Ubot"><img src="https://img.shields.io/github/last-commit/Kayzyu/Kayzu-Ubot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
     <a href="https://github.com/Kayzyu/Kayzu-Ubot"> <img src="https://img.shields.io/github/repo-size/Kayzyu/Kayzu-Ubot?logo=github&style=for-the-badge" /></a>
     <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
     <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-purple?style=for-the-badge&logo=appveyor"/>
