@@ -611,7 +611,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"{DEFAULTUSER}Pilih dari opsi di bawah ini :")0
+                    f"{DEFAULTUSER}Pilih dari opsi di bawah ini :")
                 await event.edit(
                     text,
                     file=kyylogo,
