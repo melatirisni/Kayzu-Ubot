@@ -78,7 +78,7 @@ async def redis(pong):
     await pong.edit("**✥✥**")
     await pong.edit("**✥✥✥**")
     await pong.edit("__𝙳𝙾𝚁__")
-    await pong.edit("🔥")
+    await pong.edit("🌼")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
@@ -164,7 +164,7 @@ async def pingme(pong):
     await pong.edit("**✥✥**")
     await pong.edit("**✥✥✥**")
     await pong.edit("**✥✥✥✥**")
-    await pong.edit("🔥")
+    await pong.edit("🌼")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
@@ -225,30 +225,22 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("**◓‿- PONG!!🏓**")
     await asyncio.sleep(1)
-    await pong.edit("🌸")
+    await pong.edit("🌼")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit(f"**🌸ᴏᴡɴᴇʀ : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
+    await pong.edit(f"**🌼ᴏᴡɴᴇʀ : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
 
 
 @register(outgoing=True, pattern="^.pink$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
-    await pong.edit("❃")
-    await asyncio.sleep(1)
-    await pong.edit("❀")
-    await asyncio.sleep(2)
-    await pong.edit("✿")
-    await asyncio.sleep(3)
-    await pong.edit("❁")
-    await asyncio.sleep(4)
-    await pong.edit("✾")
-    await asyncio.sleep(5)
-    await pong.edit("🖕")
-    await pong.edit("**FUCK PINGGGG!**")
+    await pong.edit("**✥**")
+    await pong.edit("**✥✥**")
+    await pong.edit("**✥✥✥**")
+    await pong.edit("**✥✥✥✥**")
+    await pong.edit("🌼")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
