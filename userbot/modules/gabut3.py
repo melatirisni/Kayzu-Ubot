@@ -1,4 +1,4 @@
-#create by : @Kayzuuuuu,@Contoldisini
+# create by : @Kayzuuuuu,@Contoldisini
 #
 
 from time import sleep
@@ -47,4 +47,3 @@ CMD_HELP.update({
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.uno`\
     \n↳ : Cobain Sendiri."
 })
-
