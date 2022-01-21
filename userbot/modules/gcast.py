@@ -10,7 +10,6 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-from requests import get
 from telethon.errors.rpcerrorlist import FloodWaitError
 
 from userbot import CMD_HELP
@@ -31,7 +30,6 @@ GCAST_BLACKLIST = [
     -1001752592753,  # Skyzusupport
     -1001788983303,  # KayzuSupport
 ]
-
 
 
 @register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
