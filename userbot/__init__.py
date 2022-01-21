@@ -125,9 +125,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/grey423/Cilik-Userbot")
+    "https://github.com/Kayzyu/KayzUbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Cilik-Userbot")
+    "UPSTREAM_REPO_BRANCH", "Kayzu-Ubot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -197,8 +197,8 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
-# Untuk Perintah .cilikalive
-CILIK_TEKS_KUSTOM = os.environ.get("CILIK_TEKS_KUSTOM", "")
+# Untuk Perintah .kayzualive
+CILIK_TEKS_KUSTOM = os.environ.get("KAYZU_TEKS_KUSTOM", "")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -387,7 +387,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"** ᴋᴀʏᴢᴜ ᴜʙᴏᴛ Bᴇʀʜᴀꜱɪʟ Dɪᴀᴋᴛɪꜰᴋᴀɴ✫**\n━━━━━━━━━━━━━━━━━━━\n❃ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n❃ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n❃ **sᴜᴘᴘᴏʀᴛ​ :** @CilikSupport\n❃ **ᴄʜᴀɴɴᴇʟ​ :** @CilikProject \n━━━━━━━━━━━━━━━━━━━")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"** ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪғᴋᴀɴ🔥**\n━━━━━━━━━━━━━━━━━━━\n♤ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n♤ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n♤ **sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\n♤ **ᴄʜᴀɴɴᴇʟ​ :** @kayzuchannel \n━━━━━━━━━━━━━━━━━━━")
     return
 
 
@@ -667,7 +667,7 @@ with bot:
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var KAYZU_TEKS_KUSTOM` [**TEKS**]\n"
-                    f"°__Mengganti Teks Yang Ada Command CilikAlive__.\n\n"
+                    f"°__Mengganti Teks Yang Ada Command KayzuAlive__.\n\n"
                     f"© @Kayzuuuuu")
                 await event.edit(
                     text,
@@ -924,7 +924,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari Cilik Userbot",
+                    "Bantuan Dari Kayzu Ubot",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
