@@ -1,5 +1,3 @@
-# create by : @Kayzuuuuu,@Contoldisini
-
 from time import sleep
 from userbot import CMD_HELP
 from userbot.events import register
