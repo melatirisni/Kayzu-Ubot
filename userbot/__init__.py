@@ -1,12 +1,3 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-# Recode by @Kayzu
-# t.me/KayzuSupport
-#
-
 """ Userbot initialization. """
 
 import logging
@@ -109,7 +100,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 
 # Custom Pmpermit pic
 PMPERMIT_PIC = os.environ.get(
-    "PMPERMIT_PIC") or "https://telegra.ph/file/a7a491a03d38756146ff0.jpg"
+    "PMPERMIT_PIC") 
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -134,9 +125,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/Kayzyu/Kayzu-Ubot")
+    "https://github.com/grey423/Cilik-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Kayzu-Ubot")
+    "UPSTREAM_REPO_BRANCH", "Cilik-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -206,8 +197,8 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
-# Untuk Perintah .kayalive
-KYY_TEKS_KUSTOM = os.environ.get("KAYZU_TEKS_KUSTOM", "")
+# Untuk Perintah .cilikalive
+CILIK_TEKS_KUSTOM = os.environ.get("CILIK_TEKS_KUSTOM", "")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -230,7 +221,7 @@ BITLY_TOKEN = os.environ.get(
     "BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Kayzu-Ubot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Kyy-Userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "7.0")
@@ -250,7 +241,7 @@ INLINE_PIC = os.environ.get(
     "INLINE_PIC") or "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✪"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -292,7 +283,7 @@ GENIUS = os.environ.get(
 
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get(
-    "QUOTES_API_TOKEN") or "93fc49f5-989a-4ded-b1e1-3760153f960a"
+    "QUOTES_API_TOKEN") or "33273f18-4a0d-4a76-8d78-a16faa002375"
 
 # Wolfram Alpha API
 WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
@@ -396,7 +387,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ Berhasil Diaktifkan🌸**\n━━━━━━━━━━━━━━━━━━━\n✧ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n✧ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n✧ **ꜱᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\n✧ **ᴄʜᴀɴɴᴇʟ​ :** @kayzuchannel \n━━━━━━━━━━━━━━━━━━━")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"** ᴋᴀʏᴢᴜ ᴜʙᴏᴛ Bᴇʀʜᴀꜱɪʟ Dɪᴀᴋᴛɪꜰᴋᴀɴ✫**\n━━━━━━━━━━━━━━━━━━━\n❃ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n❃ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n❃ **sᴜᴘᴘᴏʀᴛ​ :** @CilikSupport\n❃ **ᴄʜᴀɴɴᴇʟ​ :** @CilikProject \n━━━━━━━━━━━━━━━━━━━")
     return
 
 
@@ -481,7 +472,7 @@ with bot:
             try:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
-                    results = await event.client.inline_query(tgbotusername, "@Kyyuserrbot")
+                    results = await event.client.inline_query(tgbotusername, "@Kayzuuuuu")
                     await results[0].click(
                         event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
                     )
@@ -510,9 +501,9 @@ with bot:
                     f"**Hallo Kamu**\n**Welcome To** [{get_display_name(u)}](tg://user?id={u.id}) \n\n"
                     f"✥ **ᴘᴇɴɢɢᴜɴᴀ​ :** {get_display_name(c)} \n"
                     f"✥ **ɪᴅ ᴘᴇɴɢɢᴜɴᴀ​ :** {c.id} \n"
-                    f"✥ **ᴜ➽ꜱᴇʀɴᴀᴍᴇ​ :** @{c.username} \n"
+                    f"✥ **ᴜsᴇʀɴᴀᴍᴇ​ :** @{c.username} \n"
                     f"✥ **ᴍᴇɴᴛɪᴏɴ​ :** [{get_display_name(c)}](tg://user?id={c.id}) \n\n"
-                    f"ꜱᴇᴍᴏɢᴀ ʙᴇᴛᴀʜ ᴅɪꜱɪɴɪ ʏᴀ​ ⚡\n",
+                    f"sᴇᴍᴏɢᴀ ʙᴇᴛᴀʜ ᴅɪsɪɴɪ ʏᴀ​ ✨\n",
                     buttons=[
                         [
                             Button.url("ʀᴇᴘᴏ​",
@@ -527,7 +518,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @Kayzuuuuu\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @greyyvbss\n\n",
                     buttons=[
                         [
                             custom.Button.inline(
@@ -609,7 +600,7 @@ with bot:
                     ]
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 7.0\n🛠 Modules : {len(plugins)}\n⚡ Branch : Kayzu-Ubot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 7.0\n🛠 Modules : {len(plugins)}\n✨ Branch : Kayzu-Ubot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -620,7 +611,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"{DEFAULTUSER}Pilih dari opsi di bawah ini :")
+                    f"{DEFAULTUSER}Pilih dari opsi di bawah ini :")0
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -671,12 +662,12 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Alive**\n\n"
-                    f"× `.alive` × `.kayalive` × `.kayon`\n"
+                    f"× `.alive` × `.kayalive` × `.kay`\n"
                     f"°__Menampilkan Alive Punya Kamu__.\n\n"
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var KAYZU_TEKS_KUSTOM` [**TEKS**]\n"
-                    f"°__Mengganti Teks Yang Ada Command KayAlive__.\n\n"
+                    f"°__Mengganti Teks Yang Ada Command CilikAlive__.\n\n"
                     f"© @Kayzuuuuu")
                 await event.edit(
                     text,
@@ -740,7 +731,7 @@ with bot:
                     f"© @Kayzuuuuu")
                 await event.edit(
                     text,
-                    file=kyylogo,
+                    file=kyulogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -849,7 +840,7 @@ with bot:
                 AppPercentage = math.floor(
                     apps.get('quota_used') * 100 / quota)
                 text = (
-                    "⚡ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
+                    "✨ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
                     "╔════════════════════╗\n"
                     f" ☂ **ᴘᴇɴɢɢᴜɴᴀ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ :**\n"
                     f"  ➽  `{AppHours}`**ᴊᴀᴍ**  `{AppMinutes}`**ᴍᴇɴɪᴛ**  "
@@ -860,9 +851,7 @@ with bot:
                     f"**|**  [`{percentage}`**%**]\n"
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
-                    f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @Kayzuuuuu"
-                )
+                    f"© @Kayzuuuuu")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -885,7 +874,7 @@ with bot:
         async def killdabot(event):
             if event.query.user_id == uid:
                 text = (
-                    f"**Restaring Kayzu-Ubot**...")
+                    f"**Restaring Cilik-Userbot**...")
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -913,7 +902,7 @@ with bot:
                     buttons=[
                         [
                             Button.url("ᴄʜᴀɴɴᴇʟ",
-                                       "t.me/kayzuchannel")],
+                                       "t.me/KayzuSupport")],
                     ]
                 )
 
@@ -928,25 +917,25 @@ with bot:
                 result = builder.photo(
                     file=kyylogo,
                     link_preview=False,
-                    text=f"ᴜʙᴏᴛ​ ᴛᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
+                    text=f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME}".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡",
+                    "Bantuan Dari Cilik Userbot",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡",
+                    "  ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡",
                     text="""°Kayzu-Ubot°""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Kay",
+                                "Kayzu",
                                 "https://github.com/Kayzyu/Kayzu-Ubot"),
 
                             custom.Button.url(
