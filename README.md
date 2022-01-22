@@ -32,12 +32,13 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ### Support & Updates 
 <a href="https://t.me/KayzuSupporrt"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/kayzuchannel"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
 
+## Credits
+
+</details>
 
 <details>
-  <summary><b>© CREDITS</b></summary>
-
-
-🔰 **BIG THANKS TO**
+<summary><b> ⬇️ BIG THANKS TO ⬇️ </b></summary>
+<br>
 
 
 *   [Kyy](https://github.com/muhammadrizky16/Kyy-Userbot)   Kyy - Userbot
