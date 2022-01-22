@@ -8,9 +8,8 @@ from os import environ, execle, remove
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO_URL
-from userbot.utils import edit_delete, edit_or_reply, man_cmd
+from userbot.utils import edit_delete, edit_or_reply, register
 
 
 async def gen_chlog(repo, diff):
@@ -47,7 +46,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
             await edit_or_reply(
                 xx,
                 "**[HEROKU]: Harap Tambahkan Variabel** `HEROKU_APP_NAME` "
-                " **untuk deploy perubahan terbaru dari Userbot.**",
+                " **untuk deploy perubahan terbaru dari Ubot.**",
             )
             repo.__del__()
             return
@@ -59,7 +58,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
             await edit_or_reply(
                 xx,
                 f"{txt}\n"
-                "**Kredensial Heroku tidak valid untuk deploy Man-Userbot dyno.**",
+                "**Kredensial Heroku tidak valid untuk deploy ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ dyno.**",
             )
             return repo.__del__()
         try:
@@ -71,9 +70,9 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
             pass
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
-        repo.config_writer().set_value("user", "name", "mrismanaziz").release()
+        repo.config_writer().set_value("user", "name", "kayzyu").release()
         repo.config_writer().set_value(
-            "user", "email", "mrismanaziz@gmail.com"
+            "user", "email", "rakaash02@gmail.com"
         ).release()
         repo.git.commit("--amend", "--no-edit")
         heroku_git_url = heroku_app.git_url.replace(
@@ -95,7 +94,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Build Gagal!** Dibatalkan karena ada beberapa error.`"
             )
         await edit_or_reply(
-            xx, "`Man-Userbot Berhasil Di Deploy! Ubot bisa di gunakan kembali.`"
+            xx, "`ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ Berhasil Di Deploy! Ubot bisa di gunakan kembali.`"
         )
 
     else:
@@ -126,7 +125,7 @@ async def update(xx, repo, ups_rem, ac_br):
     execle(sys.executable, *args, environ)
 
 
-@man_cmd(pattern="update( now| deploy|$)")
+@register(pattern="update( now| deploy|$)")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     xx = await edit_or_reply(event, "`Mengecek Pembaruan, Tunggu Sebentar...`")
