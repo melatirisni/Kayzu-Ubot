@@ -97,7 +97,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "`Cilik-Userbot Berhasil DiUpdate🛃,Restart Tunggu Sebentar`"
+                "`⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ Berhasil DiUpdate🛃,Restart Tunggu Sebentar`"
             )
             await asyncio.sleep(15)
             await event.delete()
@@ -122,9 +122,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit("**✫Cilik-Userbot✫** `Berhasil Di Update!`")
+    await event.edit("**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await event.edit("**✫Cilik-Userbot✫** `Di Restart....`")
+    await event.edit("**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡** `Di Restart....`")
     await asyncio.sleep(1)
     await event.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -132,7 +132,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**✫Cilik-Userbot✫ Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await event.delete()
@@ -204,7 +204,7 @@ async def upstream(event):
 
     if conf is None and force_update is False:
         changelog_str = (
-            f"**Pembaruan Untuk ✫Cilik-Userbot✫ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
+            f"**Pembaruan Untuk ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
         )
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
