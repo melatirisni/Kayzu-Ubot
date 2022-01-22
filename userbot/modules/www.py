@@ -168,7 +168,7 @@ async def pingme(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**xxxxxxᴘɪɴɢxxxxxx** \n"
+        f"**xx━━xx━ᴘɪɴɢ━xx━━xx** \n"
         f"● **ᴘɪɴɢᴇʀ :** "
         f"`%sms` \n"
         f"● **ᴜᴘᴛɪᴍᴇ :** "
