@@ -236,10 +236,10 @@ async def pingme(pong):
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
-    await pong.edit("**✥**")
-    await pong.edit("**✥✥**")
-    await pong.edit("**✥✥✥**")
-    await pong.edit("⚡")
+    await pong.edit("**▒▒▒▒▒▒▒▒▒**")
+    await pong.edit("**█████▒▒▒▒**")
+    await pong.edit("**█████████**")
+    await pong.edit("__PINK__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
