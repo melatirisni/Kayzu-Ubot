@@ -3,7 +3,7 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.tmo(?: |$)(.*)')
+@register(outgoing=True, pattern='^.tm(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -37,7 +37,7 @@ async def typewriter(typew):
 
 
 CMD_HELP.update({
-    "gabut3": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tmo`\
+    "gabut3": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tm`\
     \n↳ : Cobain Sendiri\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.give`\
     \n↳ : Cobain Sendiri`\
