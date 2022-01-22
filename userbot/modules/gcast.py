@@ -10,8 +10,6 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-from telethon.errors.rpcerrorlist import FloodWaitError
-
 from userbot import CMD_HELP
 from userbot.events import register
 
@@ -40,22 +38,22 @@ async def gcast(event):
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
-        return await event.edit("**Berikan Sebuah Pesan atau Reply**")
-    kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 📡`")
+        await event.edit("**Berikan Sebuah Pesan atau Reply**")
+        return
+    kk = await event.edit("`Globally Broadcasting Msg...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
         if x.is_group:
             chat = x.id
-            if chat not in GCAST_BLACKLIST:
-                try:
+            try:
+                if chat not in GCAST_BLACKLIST:
                     await event.client.send_message(chat, msg)
-                    await asyncio.sleep(0.1)
                     done += 1
-                except FloodWaitError as anj:
-                    await asyncio.sleep(int(anj.seconds))
-                except BaseException:
-                    er += 1
+                elif chat not in GCAST_BLACKLIST:
+                    pass
+            except BaseException:
+                er += 1
     await kk.edit(
         f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
     )
@@ -69,8 +67,9 @@ async def gucast(event):
     elif event.is_reply:
         msg = await event.get_reply_message()
     else:
-        return await event.edit("**Berikan Sebuah Pesan atau Reply**")
-    kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 📡`")
+        await event.edit("**Berikan Sebuah Pesan atau Reply**")
+        return
+    kk = await event.edit("`Globally Broadcasting Msg...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
