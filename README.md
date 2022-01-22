@@ -1,10 +1,9 @@
-<h3 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡</h3>
-
+<h3 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡
+</h3>
 
 <p align="center">
   <img src="https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg">
 </p>
-
 
 <p align="center">
     <a href="https://github.com/Kayzyu/Kayzu-Ubot/commits/Kayzu-Ubot"><img src="https://img.shields.io/github/last-commit/Kayzyu/Kayzu-Ubot?color=ff69b4&logo=github&logoColor=ff69b4&style=for-the-badge" /></a>
@@ -12,7 +11,6 @@
     <a href="https://pypi.org/project/Telethon/"><img src="https://img.shields.io/pypi/v/telethon?color=important&label=telethon&logo=python&logoColor=brightgreen&style=for-the-badge" /></a>
     <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-purple?style=for-the-badge&logo=appveyor"/>
     </p>
-
 
 <h3 align="center">Klik Tombol di Bawah ini untuk Deploy di Heroku :</h3>
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Kayzyu/Kayzu-deploy-template/"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-aqua?style=flat&logo=heroku" width="250" height="35.00" /></a></p>
