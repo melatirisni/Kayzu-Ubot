@@ -38,7 +38,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 </details>
 
 <details>
-<summary><b> ⬇️ BIG THANKS TO ⬇️ </b></summary>
+<summary><b> TAP </b></summary>
 <br>
 
 
