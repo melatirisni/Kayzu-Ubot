@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Kayzyu/Kayzu-Ubot",
+  "repository": "https://github.com/Kayzyu/Kayzu-Ubot/Kayzu-Ubot",
   "telegram": "https://t.me/Kayzuuuuu",
   "success_url": "https://t.me/KayzuSupport",
   "stack": "container",
@@ -30,8 +30,8 @@
       "description": "Buat Bot di t.me/botfather Masukan BOT Usernamenya pake @",
     },
      "ALIVE_NAME": {
-       "description": "Isi Nama telegram mu.",
-       "required": true
+      "description": "Isi Nama telegram mu.",
+      "required": true
     },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di Grup » https://t.me/KayzuSupport » Lalu ketik #string",
