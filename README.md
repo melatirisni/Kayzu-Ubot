@@ -13,7 +13,8 @@
     </p>
 
 <h3 align="center">Klik Tombol di Bawah ini untuk Deploy di Heroku :</h3>
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Kayzyu/Kayzu-Ubot"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-aqua?style=flat&logo=heroku" width="250" height="35.00" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Kayzyu/Kayzu-Ubot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-indigo?style=flat&logo=heroku" width="250" height="38.60" /></a></p>
+
 <p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=bXVoYW1tYWRyaXpreTE2L0t5eS1Vc2VyYm90IEt5eS1Vc2VyYm90"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-aqua?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
 
 
