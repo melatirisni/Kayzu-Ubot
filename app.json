@@ -31,7 +31,7 @@
     },
      "ALIVE_NAME": {
       "description": "Isi Nama telegram mu.",
-      "required": true
+      "required": false
     },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di Grup » https://t.me/KayzuSupport » Lalu ketik #string",
