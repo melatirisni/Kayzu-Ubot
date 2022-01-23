@@ -29,9 +29,9 @@
     "BOT_USERNAME": {
       "description": "Buat Bot di t.me/botfather Masukan BOT Usernamenya pake @",
     },
-      "ALIVE_NAME": {
-      "description": "Nama Anda Contoh Kayzu .alive",
-      "required": true "required": false
+     "ALIVE_NAME": {
+       "description": "Isi Nama telegram mu.",
+       "required": true
     },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di Grup » https://t.me/KayzuSupport » Lalu ketik #string",
