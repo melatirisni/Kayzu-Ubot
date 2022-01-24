@@ -5,7 +5,6 @@ import os
 import time
 import re
 import redis
-import sys
 
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
@@ -61,12 +60,12 @@ CONFIG_CHECK = os.environ.get(
 
 if CONFIG_CHECK:
     LOGS.info(
-        "Harap hapus baris yang disebutkan dalam tagar pertama dari file config.env"
+        "Please remove the line mentioned in the first hashtag from the config.env file"
     )
-    sys.exit(1)
+    quit(1)
 
 # KALO NGEFORK ID DEVS NYA GA USAH DI HAPUS YA GOBLOK 😡
-DEVS = {
+DEVS = (
     1663258664,
     1416529201,
     1979717764,
@@ -82,7 +81,7 @@ DEVS = {
     955903284,
     844432220,
     883761960,
-}
+)
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or None)
