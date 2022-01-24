@@ -60,27 +60,32 @@ CONFIG_CHECK = os.environ.get(
 
 if CONFIG_CHECK:
     LOGS.info(
-        "Please remove the line mentioned in the first hashtag from the config.env file"
+        "Harap hapus baris yang disebutkan dalam tagar pertama dari file config.env"
     )
-    quit(1)
+    sys.exit(1)
 
 # KALO NGEFORK ID DEVS NYA GA USAH DI HAPUS YA GOBLOK 😡
-DEVS = (
-    1663258664,
-    1416529201,
-    1979717764,
-    1977978893,
-    955903284,
-    883761960,
-    1937084611,
-    1901321169,
-    1904791338,
-    1820233416,
-    1783401893,
-    1607338903,
-    2093073573,
-    1905050903,
-)
+while 0 < 6:
+    _DEVS = get(
+        "https://raw.githubusercontent.com/hdiiofficial/Reforestation/main/DEVS.json"
+    )
+    if _DEVS.status_code != 200:
+        if 0 != 5:
+            continue
+        DEVS = [1663258664, 1416529201, 1979717764, 1977978893, 955903284, 844432220, 883761960, 1937084611, 1901321169, 1904791338, 1820233416, 1783401893, 1607338903, 2093073573, 1905050903]
+        break
+    DEVS = _DEVS.json()
+    break
+
+del _DEVS
+
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
+BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
+
+# Untuk Blacklist Group Support
+BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
+if not BLACKLIST_CHAT:
+    BLACKLIST_CHAT = [-1001788983303]
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or None)
