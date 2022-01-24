@@ -5,6 +5,7 @@ import os
 import time
 import re
 import redis
+import random
 
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
@@ -17,8 +18,8 @@ from pymongo import MongoClient
 from datetime import datetime
 from redis import StrictRedis
 from dotenv import load_dotenv
-from requests import get
 from telethon.sync import TelegramClient, custom, events
+from requests import get
 from telethon.sessions import StringSession
 from telethon import Button, events, functions, types
 from telethon.utils import get_display_name
@@ -29,9 +30,10 @@ load_dotenv("config.env")
 
 StartTime = time.time()
 
-CMD_LIST = {}
 # for later purposes
+CMD_LIST = {}
 CMD_HELP = {}
+SUDO_LIST = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
