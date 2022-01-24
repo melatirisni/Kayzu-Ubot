@@ -66,29 +66,24 @@ if CONFIG_CHECK:
     sys.exit(1)
 
 # KALO NGEFORK ID DEVS NYA GA USAH DI HAPUS YA GOBLOK 😡
-while 0 < 6:
-    _DEVS = get(
-        "https://raw.githubusercontent.com/hdiiofficial/Reforestation/main/DEVS.json"
-    )
-    if _DEVS.status_code != 200:
-        if 0 != 5:
-            continue
-        DEVS = (
-            1663258664,
-            1416529201,
-            1979717764,
-            1977978893,
-            955903284,
-            883761960,
-            1937084611,
-            1901321169,
-            1904791338,
-            1820233416,
-            1783401893,
-            1607338903,
-            2093073573,
-            1905050903,
-        )
+
+DEVS = (
+        1663258664,
+        1416529201,
+        1979717764,
+        1977978893,
+        955903284,
+        844432220,
+        883761960,
+        1937084611,
+        1901321169,
+        1904791338,
+        1820233416,
+        1783401893,
+        1607338903,
+        2093073573,
+        1905050903,
+)
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or None)
