@@ -66,7 +66,6 @@ if CONFIG_CHECK:
     sys.exit(1)
 
 # KALO NGEFORK ID DEVS NYA GA USAH DI HAPUS YA GOBLOK 😡
-
 DEVS = (
         1663258664,
         1416529201,
