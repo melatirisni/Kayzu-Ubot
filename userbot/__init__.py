@@ -2,23 +2,26 @@
 
 import logging
 import os
-import re
 import time
-from datetime import datetime
-from distutils.util import strtobool as sb
-from logging import DEBUG, INFO, basicConfig, getLogger
-from math import ceil
-from sys import version_info
-
+import re
 import redis
-from dotenv import load_dotenv
+import random
+
+from sys import version_info
+from logging import basicConfig, getLogger, INFO, DEBUG
+from distutils.util import strtobool as sb
+from math import ceil
+
 from pylast import LastFMNetwork, md5
-from pymongo import MongoClient
 from pySmartDL import SmartDL
+from pymongo import MongoClient
+from datetime import datetime
 from redis import StrictRedis
-from telethon import Button, events
-from telethon.sessions import StringSession
+from dotenv import load_dotenv
+from requests import get
 from telethon.sync import TelegramClient, custom, events
+from telethon.sessions import StringSession
+from telethon import Button, events, functions, types
 from telethon.utils import get_display_name
 
 redis_db = None
@@ -27,10 +30,9 @@ load_dotenv("config.env")
 
 StartTime = time.time()
 
-# for later purposes
 CMD_LIST = {}
+# for later purposes
 CMD_HELP = {}
-SUDO_LIST = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
