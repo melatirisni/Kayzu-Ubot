@@ -5,6 +5,7 @@ import os
 import time
 import re
 import redis
+import sys
 
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
@@ -72,22 +73,7 @@ while 0 < 6:
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        DEVS = [
-            1663258664,
-            1416529201,
-            1979717764,
-            1977978893,
-            955903284,
-            844432220,
-            883761960,
-            1937084611,
-            1901321169,
-            1904791338,
-            1820233416,
-            1783401893,
-            1607338903,
-            2093073573,
-            1905050903]
+        DEVS = [1663258664, 1416529201, 1979717764, 1977978893, 955903284, 844432220, 883761960, 1937084611, 1901321169, 1904791338, 1820233416, 1783401893, 1607338903, 2093073573, 1905050903]
         break
     DEVS = _DEVS.json()
     break
