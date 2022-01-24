@@ -88,21 +88,7 @@ while 0 < 6:
             1607338903,
             2093073573,
             1905050903,
-        )
-
-        break
-    DEVS = _DEVS.json()
-    break
-
-del _DEVS
-
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
-BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
-
-# Untuk Blacklist Group Support
-BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
-if not BLACKLIST_CHAT:
-    BLACKLIST_CHAT = [-1001788983303]
+    )
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or None)
