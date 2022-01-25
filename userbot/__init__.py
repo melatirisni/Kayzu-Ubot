@@ -738,7 +738,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @skyzusupport")
+                    f"© @KayzuSupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -763,11 +763,11 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk KAYZU-UBOT​, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @skyzusupport")
+                    f"© @KayzuSupport")
                 await event.edit(
                     text,
                     file=roselogo,
@@ -829,7 +829,7 @@ with bot:
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
                     f"✥ **Sisa Dyno Heroku** `{day}` **Hari Lagi**"
-                    f"© @skyzusupport"
+                    f"© @KayzuSupport"
                 )
                 await event.edit(
                     text,
@@ -894,21 +894,21 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari **⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
+                    "Bantuan Dari **⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡**",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
-                result = builder.article(" **⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**",
-                                         text="""°𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓°""",
-                                         buttons=[[custom.Button.url("sᴋʏᴢᴜ​",
-                                                                     "https://github.com/Skyzu/skyzu-userbot"),
+                result = builder.article(" **⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ​⚡**",
+                                         text="""°ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ°""",
+                                         buttons=[[custom.Button.url("ᴋᴀʏᴢᴜ​",
+                                                                     "https://github.com/Kayzyu/Kayzu-Ubot"),
                                                    custom.Button.url("ᴄʜᴀɴɴᴇʟ​",
-                                                                     "t.me/ProjectSkyzu"),
+                                                                     "t.me/kayzuchannel"),
                                                    ],
                                                   [custom.Button.url("ʟɪᴄᴇɴsᴇ​",
-                                                                     "https://github.com/Skyzu/skyzu-userbot/LICENSE",
+                                                                     "https://github.com/Kayzyu/Kayzu-Ubot/LICENSE",
                                                                      )],
                                                   ],
                                          link_preview=False,
@@ -947,8 +947,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/skyzusupport"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ProjectSkyzu"),
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/KayzuSupport"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/kayzuchannel"),
                         ],
                         [custom.Button.inline(
                             "°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
