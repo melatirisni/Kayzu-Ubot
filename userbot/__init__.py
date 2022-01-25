@@ -333,7 +333,7 @@ for binary, path in binaries.items():
 # 'bot' variable
 if STRING_SESSION:
     # pylint: disable=invalid-name
-    bot = TelegramClient(StringSession(STRING_SESSION), API_HASH)
+    bot = TelegramClient(StringSession(STRING_SESSION)
 
 
 async def check_botlog_chatid():
