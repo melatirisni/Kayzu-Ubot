@@ -87,6 +87,9 @@ DEVS = (
 BOTLOG = sb(os.environ.get("BOTLOG", "True"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
+# Userbot Session String
+STRING_SESSION = os.environ.get("STRING_SESSION", "")
+
 # Custom Pmpermit text
 PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 PM_LIMIT = int(os.environ.get("PM_LIMIT", 6))
