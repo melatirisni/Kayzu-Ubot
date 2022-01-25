@@ -327,10 +327,6 @@ for binary, path in binaries.items():
     downloader.start()
     os.chmod(path, 0o755)
 
-# 'bot' variable
-if STRING_SESSION:
-    # pylint: disable=invalid-name
-    bot = TelegramClient(StringSession(STRING_SESSION), API_KEY, API_HASH)
 else:
     # pylint: disable=invalid-name
     bot = TelegramClient("userbot", API_KEY, API_HASH)
