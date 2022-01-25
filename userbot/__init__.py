@@ -334,10 +334,6 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     # pylint: disable=invalid-name
     bot = TelegramClient(StringSession(STRING_SESSION), API_KEY, API_HASH)
-else:
-    # pylint: disable=invalid-name
-    bot = TelegramClient("userbot", API_KEY, API_HASH)
-
 
 async def check_botlog_chatid():
     if not BOTLOG_CHATID and LOGSPAMMER:
