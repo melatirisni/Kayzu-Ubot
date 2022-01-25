@@ -316,18 +316,17 @@ async def redis(alive):
     await asyncio.sleep(2)
     output = (
         f"╭✠╼━━⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡━━━✠╮\n"
-        f"┃♤ **Name     :** {DEFAULTUSER} \n"
-        f"┃♤ **Username :** @{user.username} \n"
-        f"┃♤ **Telethon :** Ver {version.__version__} \n"
-        f"┃♤ **Python   :** Ver {python_version()} \n"
-        f"┃♤ **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
-        f"┃♤ **Bot Ver  :** {BOT_VER} \n"
-        f"┃♤ **Modules  :** {len(modules)} Modules \n"
-        f"┃♤ **GitHub   :** [Userbot](https://github.com/Kayzyu/Kayzu-Ubot) \n"
-        f"┃♤ **Owner    :** [Kayzu](https://t.me/Kayzuuuuu) \n"
-        f"┃♤ **Support  :** [groups](https://t.me/KayzuSupport) \n"
-        f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
-    )
+        f"┃♤ `Name     :` {DEFAULTUSER} \n"
+        f"┃♤ `Username :` @{user.username} \n"
+        f"┃♤ `Telethon :` Ver {version.__version__} \n"
+        f"┃♤ `Python   :` Ver {python_version()} \n"
+        f"┃♤ `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
+        f"┃♤ `Bot Ver  :` {BOT_VER} \n"
+        f"┃♤ `Modules  :` {len(modules)} Modules \n"
+        f"┃♤ `GitHub   :` [Userbot](https://github.com/Kayzyu/Kayzu-Ubot) \n"
+        f"┃♤ `Owner    :` [Kayzu](https://t.me/Kayzuuuuu) \n"
+        f"┃♤ `Support  :` [Groups](https://t.me/KayzuSupport) \n"
+        f"╰╼━━━━━━━━━━━━━━━━╯")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
