@@ -42,13 +42,13 @@ CUSTOM_TEXT = str(
     PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Cɪʟɪᴋ Uꜱᴇʀʙᴏᴛ {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
 DEF_UNAPPROVED_MSG = (
     "╔════════════════════╗\n"
-    "      ✫ Aᴛᴛᴇɴᴛɪᴏɴ  Pʟᴇᴀꜱᴇ ✫ \n"
+    "  ⛔ ᴀᴛᴛᴇɴᴛɪᴏɴ ᴘʟᴇᴀꜱᴇ ⛔\n"
     "╚════════════════════╝\n"
     "• Saya belum menyetujui anda untuk PM.\n"
     "• Tunggu sampai saya menyetujui PM anda.\n"
     "• Jangan Spam Chat atau anda akan otomatis diblokir.\n"
     "╔════════════════════╗\n"
-    "    Pᴇꜱᴀɴ Oᴛᴏᴍᴀᴛɪꜱ Bʏ  ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡\n"
+    "  ᴀᴜᴛᴏ ᴍᴇssᴀɢᴇ ʙʏ ҡᴀʏᴢᴜ\n"
     "╚════════════════════╝\n")
 # =================================================================
 
