@@ -335,6 +335,7 @@ if STRING_SESSION:
     # pylint: disable=invalid-name
     bot = TelegramClient(StringSession(STRING_SESSION), API_HASH)
 
+
 async def check_botlog_chatid():
     if not BOTLOG_CHATID and LOGSPAMMER:
         LOGS.info(
