@@ -42,6 +42,7 @@ CMD_HELP.update(
         \n↳ : lihat sendiri\
         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .roas3\
         \n↳ : lihat sendiri\
-        \n↳ **COBAIN AJA SENDIRI SEMUA!**.\“
+        \n↳ **COBAIN AJA SENDIRI SEMUA!**.\
+     “
     }
 )
