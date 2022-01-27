@@ -15,7 +15,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
-        "**NAJIS  YE JADI ORANG JANGAN CUMA BEBAN KELUARGA,, BEBAN NEGARA,, BEBAN DUNIA AKHRAT TOLOL,YE KERJA DONGO,KAGA ADA YANG MAU JUGA MERHATIIN ORANG HINA KEK LU SADAR DIRI LU ANAK HARAM**")
+        "**NAJIS  YE JADI ORANG JANGAN CUMA BEBAN KELUARGA, BEBAN NEGARA, BEBAN DUNIA AKHRAT TOLOL,YE KERJA DONGO,KAGA ADA YANG MAU JUGA MERHATIIN ORANG HINA KEK LU SADAR DIRI LU ANAK HARAM**")
 
 
 @register(outgoing=True, pattern=r"^\.roas1(?: |$)(.*)")
@@ -42,7 +42,6 @@ CMD_HELP.update(
         \n↳ : lihat sendiri\
         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .roas3\
         \n↳ : lihat sendiri\
-        \n↳ **COBAIN AJA SENDIRI SEMUA!**.\
-    "
+        \n↳ **COBAIN AJA SENDIRI SEMUA!**.\ “
     }
 )
