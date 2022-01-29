@@ -59,8 +59,9 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": true
     },
-    "S_PACK_NAME": {
-      "description": "Nama Sticker Pack Mu",
+    "ALIVE_LOGO": {
+      "description": "Boleh ganti dengan foto kalian",
+      "value":https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg
       "required": false
     },
     "LOGSPAMMER": {
