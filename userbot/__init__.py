@@ -198,7 +198,9 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kayalive
-KAYZU_TEKS_KUSTOM = os.environ.get("KAYZU_TEKS_KUSTOM", "I'am Using Kayzu-Ubot✨")
+KAYZU_TEKS_KUSTOM = os.environ.get(
+    "KAYZU_TEKS_KUSTOM",
+    "I'am Using Kayzu-Ubot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
