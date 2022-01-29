@@ -78,6 +78,7 @@ DEVS = (
     1901321169,
     1977874449,
     1675900974,
+    1904791338,
 )
 
 # Telegram App KEY and HASH
@@ -197,9 +198,7 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kayalive
-KAYZU_TEKS_KUSTOM = os.environ.get(
-    "KAYZU_TEKS_KUSTOM",
-    "I'am Using Kayzu-Ubot✨")
+KAYZU_TEKS_KUSTOM = os.environ.get("KAYZU_TEKS_KUSTOM", "I'am Using Kayzu-Ubot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -550,7 +549,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @IDnyaKosong\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @Kayzuuuuu\n\n",
                     buttons=[
                         [
                             custom.Button.inline(
@@ -584,7 +583,7 @@ with bot:
             event.builder
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@IdNyaKosong"):
+                    "@Kayzuuuuu"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
                 await event.edit(text,
@@ -760,7 +759,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @IDnyaKosong")
+                    f"© @Kayzuuuuu")
                 await event.edit(
                     text,
                     file=kyulogo,
