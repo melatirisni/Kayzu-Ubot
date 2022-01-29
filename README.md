@@ -1,5 +1,5 @@
-<h3 align="center">⚡ＫＡＹＺＵ－ＵＢＯＴ⚡
-</h3>
+<h1 align="center">🔥ҡᴀʏᴢᴜ-ᴜвσт🔥
+</h1>
 
 <p align="center">
   <img src="https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg">
