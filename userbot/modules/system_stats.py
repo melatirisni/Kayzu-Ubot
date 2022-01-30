@@ -173,7 +173,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡Kayzu-Ubot⚡ Versi:** \n "
+            "**⚜-**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Versi:** \n "
             f"heads/Kayzu-Ubot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
@@ -237,7 +237,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡** \n\n"
+        f" **🔥ҡᴀʏᴢᴜ-ᴜвσт🔥** \n\n"
         f"\n__**{KAYZU_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"◙ `Name       :` {DEFAULTUSER} \n"
@@ -312,10 +312,10 @@ async def redis(alive):
     await alive.edit("__Sedang Memuat...__")
     await alive.edit("__Sedang Memuat..__")
     await alive.edit("__Sedang Memuat...__")
-    await alive.edit("⚡")
+    await alive.edit("🔥")
     await asyncio.sleep(2)
     output = (
-        f"┏━━━━⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡━━━━━ \n"
+        f"┏━━━━🔥ҡᴀʏᴢᴜ-ᴜвσт🔥━━━━━ \n"
         f"┣  `Name     :` {DEFAULTUSER} \n"
         f"┣  `Username :` @{user.username} \n"
         f"┣  `Telethon :` Ver {version.__version__} \n"
