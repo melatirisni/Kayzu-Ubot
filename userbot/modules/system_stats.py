@@ -325,7 +325,7 @@ async def redis(alive):
         f"┣  `Modules  :` {len(modules)} Modules \n"
         f"┣  `GitHub   :` [Kayzu](https://github.com/Kayzyu/Kayzu-Ubot) \n"
         f"┣  `Support  :` [Groups](https://t.me/KayzuSupport) \n"
-        f"┣  `Owner    :` [Kayzu](https://t.me/Kayzuuuuu) \n"
+        f"┣  `Owner    :` [Kay](https://t.me/Kayzuuuuu) \n"
         f"┗━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
