@@ -78,7 +78,7 @@ async def redis(pong):
     await pong.edit("**✥✥**")
     await pong.edit("**✥✥✥**")
     await pong.edit("__𝙳𝙾𝚁__")
-    await pong.edit("⚡")
+    await pong.edit("🔥")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
@@ -122,7 +122,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡**\n"
+        f"**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥**\n"
         f"➾ __Signal__    __:__ "
         f"`%sms` \n"
         f"➾ __Uptime__ __:__ "
@@ -146,7 +146,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**⚡ ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ  ⚡**\n\n"
+        f"**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥**\n\n"
         f"** ▹  ꜱɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ▹  ᴜᴘᴛɪᴍᴇ  :** "
@@ -164,11 +164,11 @@ async def pingme(pong):
     await pong.edit("**✥✥**")
     await pong.edit("**✥✥✥**")
     await pong.edit("**✥✥✥✥**")
-    await pong.edit("⚡")
+    await pong.edit("🔥")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**xx━━xx━ᴘɪɴɢ━xx━━xx** \n"
+        f"**☾━━━‧━☾Pɪɴɢ☽━━━━☽** \n"
         f"● **ᴘɪɴɢᴇʀ :** "
         f"`%sms` \n"
         f"● **ᴜᴘᴛɪᴍᴇ :** "
@@ -202,7 +202,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "✧ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡"
+        "✧ **BOT:** 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥"
     )
 
 
@@ -225,11 +225,11 @@ async def pingme(pong):
     start = datetime.now()
     await pong.edit("**◓‿- PONG!!🏓**")
     await asyncio.sleep(1)
-    await pong.edit("⚡")
+    await pong.edit("🔥")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit(f"**⚡ᴏᴡɴᴇʀ : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
+    await pong.edit(f"**🔥ᴏᴡɴᴇʀ : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
 
 
 @register(outgoing=True, pattern="^.pink$")
