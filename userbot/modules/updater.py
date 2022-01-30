@@ -57,7 +57,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 "`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `"
-                " untuk dapat deploy perubahan terbaru dari ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡.`"
+                " untuk dapat deploy perubahan terbaru dari 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥.`"
             )
             repo.__del__()
             return
@@ -97,14 +97,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "`⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ Berhasil DiUpdate🛃,Restart Tunggu Sebentar`"
+                "`🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Berhasil DiUpdate🛃,Restart Tunggu Sebentar`"
             )
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ Berhasil Di Update`"
+                BOTLOG_CHATID, "#BOT \n" "`🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Berhasil Di Update`"
             )
 
     else:
@@ -122,9 +122,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit("**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡** `Berhasil Di Update!`")
+    await event.edit("**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await event.edit("**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡** `Di Restart....`")
+    await event.edit("**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥** `Di Restart....`")
     await asyncio.sleep(1)
     await event.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -132,7 +132,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await event.delete()
@@ -196,7 +196,7 @@ async def upstream(event):
 
     if changelog == "" and force_update is False:
         await event.edit(
-            f"\n⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ Sudah Versi Terbaru || Tunggu Update Terbaru\n"
+            f"\n🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Sudah Versi Terbaru || Tunggu Update Terbaru\n"
         )
         await asyncio.sleep(15)
         await event.delete()
@@ -228,13 +228,13 @@ async def upstream(event):
             "`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`"
         )
     else:
-        await event.edit("` Proses Update ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡, Loading....1%`")
-        await event.edit("` Proses Update ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡, Loading....20%`")
-        await event.edit("` Proses Update ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡, Loading....35%`")
-        await event.edit("` Proses Update ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡, Loading....77%`")
-        await event.edit("` Proses Update ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡, Updating...90%`")
+        await event.edit("` Proses Update 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥, Loading....1%`")
+        await event.edit("` Proses Update 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥, Loading....20%`")
+        await event.edit("` Proses Update 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥, Loading....35%`")
+        await event.edit("` Proses Update 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥, Loading....77%`")
+        await event.edit("` Proses Update 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥, Updating...90%`")
         await event.edit(
-            "` Proses Update ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":
