@@ -39,17 +39,17 @@ LASTMSG = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 CUSTOM_TEXT = str(
-    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Cɪʟɪᴋ Uꜱᴇʀʙᴏᴛ {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
+    PMPERMIT_TEXT) if PMPERMIT_TEXT else f"__Halo kawan, saya bot yang menjaga room chat Kyy-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
 DEF_UNAPPROVED_MSG = (
-    "╔════════════════════╗\n"
-    "  ⛔ ᴀᴛᴛᴇɴᴛɪᴏɴ ᴘʟᴇᴀꜱᴇ ⛔\n"
-    "╚════════════════════╝\n"
-    "• Saya belum menyetujui anda untuk PM.\n"
-    "• Tunggu sampai saya menyetujui PM anda.\n"
-    "• Jangan Spam Chat atau anda akan otomatis diblokir.\n"
-    "╔════════════════════╗\n"
-    "  ᴀᴜᴛᴏ ᴍᴇssᴀɢᴇ ʙʏ ҡᴀʏᴢᴜ\n"
-    "╚════════════════════╝\n")
+    "╔═════════════════════╗\n"
+    "“𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐓𝐡𝐞 𝐏𝐫𝐢𝐯𝐚𝐜𝐲 𝐌𝐞𝐬𝐬𝐚𝐠𝐞”    ”\n"
+    "╚═════════════════════╝\n"
+    "**ᴛᴏʟᴏɴɢ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ ᴄʜᴀᴛ ᴋᴇᴘᴀᴅᴀ ᴍᴀᴊɪᴋᴀɴ sᴀʏᴀ** \n"
+    f"**ᴋᴀʀᴇɴᴀ sᴀʏᴀ ᴀᴋᴀɴ ᴏᴛᴏᴍᴀᴛɪs ᴍᴇᴍʙʟᴏᴋɪʀ ᴋᴀᴍᴜ, ᴛᴜɴɢɢᴜ sᴀᴍᴘᴀɪ {DEFAULTUSER} ᴍᴇɴᴇʀɪᴍᴀ ᴘᴇsᴀɴ ᴋᴀᴍᴜ [⚠️]({ALIVE_LOGO})** \n"
+    "╔═════════════════════╗\n"
+    "│○›Pᴇsᴀɴ Oᴛᴏᴍᴀᴛɪs           \n"
+    f"│○›Bʏ ҡᴀʏᴢᴜ-ᴜвσт           \n"
+    "╚═════════════════════╝")
 # =================================================================
 
 
@@ -247,9 +247,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima `")
+        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
 
-    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima`")
+    await apprvpm.edit(f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima 😎`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
