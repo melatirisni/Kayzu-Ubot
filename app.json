@@ -1,6 +1,6 @@
 {
   "name": "Kayzu-Ubot",
-  "description": "KAYZU-UBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "description": "USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg",
   "keywords": [
     "telegram",
@@ -8,22 +8,27 @@
     "plugin",
     "modular",
     "productivity"
-],
-  "repository": "https://github.com/Kayzyu/Kayzu-Ubot",
+  ],
+  "repository": "https://github.com/Kayzyu/Kayzu-Ubot/Kayzu-Ubot",
   "telegram": "https://t.me/Kayzuuuuu",
-  "success_url": "https://t.me/KayzuSupport",
+  "success_url": "https://t.me/kayzuchannel",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Dapatkan Api Key di web my.telegram.org/Dibot @scrapsenbot.",
+      "description": "Dapatkan Api Key di web my.telegram.org",
       "required": true
     },
     "API_HASH": {
-      "description": "Dapatkan Api Hash Di Web my.telegram.org/Dibot @scrapsendbot.",
+      "description": "Dapatkan Api Hash Di Web my.telegram.org",
       "required": true
     },
+    "ALIVE_LOGO": {
+      "description": "Gambar dalam module .alive",
+      "value": "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg",
+      "required": false
+    },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @Kayzuuuuu di telegram",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @IDnyaKosong di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -35,19 +40,12 @@
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
-    "BOTLOG": {
-      "description": "Kalo Mau Off in BOTLOG Ganti False",
-      "value": "True",
-      "required": true
-    },
     "BOTLOG_CHATID": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "-1001572742132",
       "required": true
     },
     "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "value": "-1001572742132",
       "required": true
     },
     "PM_AUTO_BAN": {
@@ -59,9 +57,9 @@
       "description": "Nama untuk menunjukan pesan .alive",
       "required": true
     },
-    "ALIVE_LOGO": {
-      "description": "Boleh ganti dengan foto kalian",
-      "required": true
+    "S_PACK_NAME": {
+      "description": "Nama Sticker Pack Mu",
+      "required": false
     },
     "LOGSPAMMER": {
       "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
@@ -70,11 +68,11 @@
     },
     "BOT_TOKEN": {
       "description": "Set this to enable inline bot helper. get the token from @BotFather",
-      "required": false
+      "required": true
     },
     "BOT_USERNAME": {
       "description": "Username Bot Kamu Di @BotFather, Tanpa @",
-      "required": false
+      "required": true
     }
   },
   "addons": [
@@ -100,5 +98,11 @@
     "url": "https://github.com/amivin/aria2-heroku"
   }, {
     "url": "https://github.com/stevo550/buildpack-slug-cleaner"
-  }]
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
