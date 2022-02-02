@@ -40,6 +40,7 @@ Pillow>=6.0.0
 fontTools
 psycopg2
 psycopg2-binary
+pybase64>=0.4.0
 pylast
 pySmartDL
 python-barcode
@@ -77,7 +78,7 @@ pyfiglet
 jotquote
 html_telegraph_poster
 csvfaker
-git+https://github.com/LonamiWebs/Telethon
+Telethon
 git+https://github.com/ahupp/python-magic
 pytube>=9.5.1
 pymongo[srv]
