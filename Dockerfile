@@ -1,8 +1,7 @@
 # Using Python Slim-Buster
-FROM vckyouuu/geezprojects:buster
+FROM kyyex/kyy-userbot:buster
 #━━━━━ Userbot Telegram ━━━━━
-#━━━━━ By Skyzuu-Userbot ━━━━━
-#━━━━━ Ex Kayzu-Ubot ━━━━━
+#━━━━━ By Kayzu-Ubot ━━━━━
 
 RUN git clone -b Kayzu-Ubot https://github.com/Kayzyu/Kayzu-Ubot /root/userbot
 RUN mkdir /root/userbot/.bin
@@ -10,7 +9,7 @@ RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
 
 #Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/Skyzu/skyzu-userbot/skyzu-userbot/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/Kayzyu/Kayzu-Ubot/Kayzu-Ubot/requirements.txt
 
 EXPOSE 80 443
 
