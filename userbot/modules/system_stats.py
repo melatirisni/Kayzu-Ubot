@@ -11,7 +11,6 @@ from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 from platform import python_version, uname
 from shutil import which
-
 from os import remove
 from telethon import __version__, version
 import platform
@@ -19,17 +18,9 @@ import sys
 import time
 from datetime import datetime
 import psutil
-
-from userbot import (
-    ALIVE_LOGO,
-    ALIVE_NAME,
-    BOT_VER,
-    CMD_HELP,
-    StartTime,
-    UPSTREAM_REPO_BRANCH,
-    bot,
-)
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, KAY_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
 from userbot.events import register
+
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -173,9 +164,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Versi:** \n "
+            "**♤-**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Versi:** \n "
             f"heads/Kayzu-Ubot-0-x634i7u1"
-            "\n**⚜-**Revisi:**\n "
+            "\n**♤-**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -232,13 +223,13 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:kayzualive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:kyyalive)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f" **🔥ҡᴀʏᴢᴜ-ᴜвσт🔥** \n\n"
-        f"\n__**{KAYZU_TEKS_KUSTOM}**__\n\n\n"
+        f"\n__**{KAY_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"◙ `Name       :` {DEFAULTUSER} \n"
         f"◙ `Username   :` @{user.username} \n"
@@ -247,7 +238,7 @@ async def amireallyalive(alive):
         f"◙ `Bot Ver    :` {BOT_VER} \n"
         f"◙ `Modules    :` {len(modules)} \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/KayzuSupport) | [ᴄʜᴀɴɴᴇʟ](t.me/kayzuchannel) | [ᴏᴡɴᴇʀ](https://t.me/Kayzuuuuu) | [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)")
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/KayzuSupport) | [ᴄʜᴀɴɴᴇʟ](https://t.me/kayzuchannel) | [ᴏᴡɴᴇʀ](https://t.me/Kayzuuuuu) | [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -268,13 +259,13 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:kayon)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:kyyon)\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ    :`[Kayzu](t.me/Kayzuuuuu) \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ    :`[Kay](t.me/Kayzuuuuu) \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ   :`Ubuntu 20.10 \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__} \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ   :`v.{python_version()} \n"
@@ -315,7 +306,7 @@ async def redis(alive):
     await alive.edit("🔥")
     await asyncio.sleep(2)
     output = (
-        f"┏━━━━🔥ҡᴀʏᴢᴜ-ᴜвσт🔥━━━━━ \n"
+        f"┏━━━━🔥ҡᴀʏᴢᴜ-ᴜвσт🔥━━━━ \n"
         f"┣  `Name     :` {DEFAULTUSER} \n"
         f"┣  `Username :` @{user.username} \n"
         f"┣  `Telethon :` Ver {version.__version__} \n"
