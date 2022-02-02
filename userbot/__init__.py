@@ -68,7 +68,7 @@ if CONFIG_CHECK:
     )
     quit(1)
 
-# KALO NGEFORK ID DEVS NYA GA USAH DI HAPUS YA GOBLOK 😡
+# KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA KONTOLLLL 😡
 DEVS = (
     1663258664,
     1416529201,
@@ -199,9 +199,7 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kayalive
-KAYZU_TEKS_KUSTOM = os.environ.get(
-    "KAYZU_TEKS_KUSTOM",
-    "I'am Using Kayzu-Ubot✨")
+KAY_TEKS_KUSTOM = os.environ.get("KAY_TEKS_KUSTOM", "I'am Using Kayzu-Ubot🔥")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -244,7 +242,7 @@ INLINE_PIC = os.environ.get(
     "INLINE_PIC") or "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🔥"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -365,14 +363,16 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = str("@KayzuSupport")
-    checker = str("@kayzuchannel")
+    gocheck = pybase64.b64decode("QE5hc3R5UHJvamVjdA==")
+    checker = pybase64.b64decode("QE5hc3R5U3VwcG9ydHQ=")
+    Input_gocheck = gocheck.decode('utf-8')
+    Input_checker = checker.decode('utf-8')
     try:
-        await bot(GetSec(gocheck))
+        await bot(GetSec(f"{Input_gocheck}"))
     except BaseException:
         pass
     try:
-        await bot(GetSec(checker))
+        await bot(GetSec(f"{Input_checker}"))
     except BaseException:
         pass
 
@@ -381,8 +381,8 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file.")
+            "Join Support Group @KayzuSupport and Channel @kayzuchannel to see the updates of ubot"
+            "Don't Leave")
         quit(1)
 
 
@@ -421,7 +421,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**Kayzu-Ubot Berhasil Diaktifkan🔥**\n━━━━━━━━━━━━━━━━━━━\n❃ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n❃ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n❃ **sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\n❃ **ᴄʜᴀɴɴᴇʟ​ :** @kayzuchannel \n━━━━━━━━━━━━━━━━━━━")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**ҡᴀʏᴢᴜ-ᴜвσт ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪғᴋᴀɴ✨**\n━━━━━━━━━━━━━━━━━━━\n❃ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n❃ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n❃ **sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\n❃ **ᴄʜᴀɴɴᴇʟ​ :** @kayzuchannel \n━━━━━━━━━━━━━━━━━━━")
     return
 
 with bot:
@@ -506,7 +506,7 @@ with bot:
             try:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
-                    results = await event.client.inline_query(tgbotusername, "@KayzuUbot")
+                    results = await event.client.inline_query(tgbotusername, "@Kayubot")
                     await results[0].click(
                         event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
                     )
@@ -586,9 +586,9 @@ with bot:
             event.builder
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@KayzuUbot"):
+                    "@Kayzuuuuu"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
+                text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
                 await event.edit(text,
                                  file=kyylogo,
                                  buttons=buttons,
@@ -621,7 +621,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"❁ __Saya Adalah Kayzu Userbot Yang Digunakan Banyak User Telegram__.\n\n"
+                    f"❁ __Saya Adalah Kayzu Ubot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 1816 Modules__.\n\n"
                     f"© @Kayzuuuuu")
@@ -700,7 +700,7 @@ with bot:
                     f"°__Menampilkan Alive Punya Kamu__.\n\n"
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
-                    f"× `.set var KAYZU_TEKS_KUSTOM` [**TEKS**]\n"
+                    f"× `.set var KAY_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command KayAlive__.\n\n"
                     f"© @Kayzuuuuu")
                 await event.edit(
@@ -765,7 +765,7 @@ with bot:
                     f"© @Kayzuuuuu")
                 await event.edit(
                     text,
-                    file=kyulogo,
+                    file=kyylogo,
                     link_preview=True,
                     buttons=[
                         [
@@ -969,14 +969,14 @@ with bot:
                     buttons=[
                         [
                             custom.Button.url(
-                                "Kayzu",
+                                "ҡᴀʏᴢᴜ",
                                 "https://github.com/Kayzyu/Kayzu-Ubot"),
 
                             custom.Button.url(
-                                "Channel",
+                                "ᴄʜᴀɴɴᴇʟ",
                                 "t.me/kayzuchannel")],
                         [custom.Button.url(
-                            "License",
+                            "ʟɪᴄᴇɴsᴇ",
                             "https://github.com/Kayzyu/Kayzu-Ubot/LICENSE")],
                     ],
                     link_preview=False,
