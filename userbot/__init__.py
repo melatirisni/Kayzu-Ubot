@@ -364,7 +364,7 @@ except Exception as e:
 
 async def checking():
     gocheck = str("@KayzuSupport")
-    checker = str("@NastyProject")
+    checker = str("@kayzuchannel")
     try:
         await bot(GetSec(f"{gocheck}"))
     except BaseException:
