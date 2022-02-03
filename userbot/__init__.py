@@ -363,8 +363,8 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = pybase64.b64decode("QE5hc3R5UHJvamVjdA==")
-    checker = pybase64.b64decode("QE5hc3R5U3VwcG9ydHQ=")
+    gocheck = pybase64.b64decode("@KayzuSupport")
+    checker = pybase64.b64decode("@kayzuchannel")
     Input_gocheck = gocheck.decode('utf-8')
     Input_checker = checker.decode('utf-8')
     try:
