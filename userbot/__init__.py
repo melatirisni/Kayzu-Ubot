@@ -363,16 +363,14 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = pybase64.b64decode("@KayzuSupport")
-    checker = pybase64.b64decode("@kayzuchannel")
-    Input_gocheck = gocheck.decode('utf-8')
-    Input_checker = checker.decode('utf-8')
+    gocheck = str("@KayzuSupport")
+    checker = str("@NastyProject")
     try:
-        await bot(GetSec(f"{Input_gocheck}"))
+        await bot(GetSec(f"{gocheck}"))
     except BaseException:
         pass
     try:
-        await bot(GetSec(f"{Input_checker}"))
+        await bot(GetSec(f"{checker}"))
     except BaseException:
         pass
 
