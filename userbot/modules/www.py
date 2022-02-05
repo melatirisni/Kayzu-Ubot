@@ -174,7 +174,6 @@ async def pingme(pong):
         f"`{uptime}` \n"
         f" **Oᴡɴᴇʀ  :** `{ALIVE_NAME}` \n" % (duration)
     )
-        
 
 
 @register(outgoing=True, pattern="^.kecepatan$")
