@@ -163,16 +163,15 @@ async def pingme(pong):
     await pong.edit("**◆**")
     await pong.edit("**◆◆**")
     await pong.edit("**◆◆◆**")
-    await pong.edit("**◆◆◆◆**")
     await pong.edit("🔥")
     end = datetime.now()
     (end - start).microseconds / 1000
     await pong.edit(
-        f" **Pɪɴɢ​ :** \n"
-        f"`%{sms}` \n"
-        f"**Uᴘᴛɪᴍᴇ​ :** "
-        f"`{uptime}` \n"
-    )
+        f"**PING!!🏓**\n"
+        f" **Pɪɴɢᴇʀ :** "
+        f"`%sms` \n"
+        f" **Uᴘᴛɪᴍᴇ :** "
+        f"`{uptime}` \n")
 
 
 @register(outgoing=True, pattern="^.kecepatan$")
@@ -234,14 +233,29 @@ async def pingme(pong):
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
-    await pong.edit("**▒▒▒▒▒▒▒▒▒**")
-    await pong.edit("**█████▒▒▒▒**")
-    await pong.edit("**█████████**")
-    await pong.edit("__PINK__")
+    await pong.edit("8✊===D")
+    await pong.edit("8=✊==D")
+    await pong.edit("8==✊=D")
+    await pong.edit("8===✊D")
+    await pong.edit("8==✊=D")
+    await pong.edit("8=✊==D")
+    await pong.edit("8✊===D")
+    await pong.edit("8=✊==D")
+    await pong.edit("8==✊=D")
+    await pong.edit("8===✊D")
+    await pong.edit("8==✊=D")
+    await pong.edit("8=✊==D")
+    await pong.edit("8✊===D")
+    await pong.edit("8=✊==D")
+    await pong.edit("8==✊=D")
+    await pong.edit("8===✊D")
+    await pong.edit("8===✊D💦")
+    await pong.edit("8====D💦💦")
+    await pong.edit("**CROOTTTT PINGGGG!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**𝙳𝙾𝚁!! **\n**𝙳𝚄𝙰𝚁** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
+        f"**BABI!! **\n**NGENTOT** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
     )
 
 
