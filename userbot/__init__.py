@@ -421,7 +421,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"\nҡᴀʏᴢᴜ-ᴜвσт\nᴥ **Bσт Oғ :** {ALIVE_NAME}\nᴥ **Bσт Vᴇʀ :** 7.0\nBᴇʀʜᴀsɪʟ\nᴥ **Sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\nᴥ **Cʜᴀɴɴᴇʟ​ :** @kayzuchannel \nᴅɪᴀᴋᴛɪғᴋᴀɴ🔥")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"\nҡᴀʏᴢᴜ-ᴜвσт Bᴇʀʜᴀsɪʟ Dɪᴀᴋᴛɪғᴋᴀɴ\nᴥ **Bσт Oғ :** {ALIVE_NAME}\nᴥ **Bσт Vᴇʀ :** 7.0\n━ ━ ━ ━ ━\nᴥ **Sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\nᴥ **Cʜᴀɴɴᴇʟ​ :** @kayzuchannel \")
     return
 
 with bot:
@@ -588,7 +588,7 @@ with bot:
             if event.query.user_id == uid and query.startswith(
                     "@Kayzuuuuu"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
+                text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\nᴥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\nᴥ **ʙᴏᴛ ᴠᴇʀ :** 7.0\nᴥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\nᴥ **ʙᴏᴛʏᴏᴜ :** @{BOT_USERNAME} "
                 await event.edit(text,
                                  file=kyylogo,
                                  buttons=buttons,
