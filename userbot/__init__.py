@@ -242,7 +242,7 @@ INLINE_PIC = os.environ.get(
     "INLINE_PIC") or "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🔥"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "ᴥ"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -421,7 +421,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"**ҡᴀʏᴢᴜ-ᴜвσт ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪғᴋᴀɴ✨**\n━━━━━━━━━━━━━━━━━━━\n❃ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}\n❃ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n━━━━━━━━━━━━━━━━━━━\n❃ **sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\n❃ **ᴄʜᴀɴɴᴇʟ​ :** @kayzuchannel \n━━━━━━━━━━━━━━━━━━━")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"\nҡᴀʏᴢᴜ-ᴜвσт\nᴥ **Bσт Oғ :** {ALIVE_NAME}\nᴥ **Bσт Vᴇʀ :** 7.0\nBᴇʀʜᴀsɪʟ\nᴥ **Sᴜᴘᴘᴏʀᴛ​ :** @KayzuSupport\nᴥ **Cʜᴀɴɴᴇʟ​ :** @kayzuchannel \nᴅɪᴀᴋᴛɪғᴋᴀɴ🔥")
     return
 
 with bot:
