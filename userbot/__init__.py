@@ -421,7 +421,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"\nҡᴀʏᴢᴜ - ᴜвσт Bᴇʀʜᴀsɪʟ Dɪᴀᴋᴛɪғᴋᴀɴ\nᴥ ** Bσт Oғ: ** {ALIVE_NAME}\nᴥ ** Bσт Vᴇʀ: ** 7.0\n━ ━ ━ ━ ━\nᴥ ** Sᴜᴘᴘᴏʀᴛ​: ** @ KayzuSupport\nᴥ ** Cʜᴀɴɴᴇʟ​: ** @ kayzuchannel\n")
+    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"\nҡᴀʏᴢᴜ - ᴜвσт Bᴇʀʜᴀsɪʟ Dɪᴀᴋᴛɪғᴋᴀɴ\nᴥ ** Bσт Oғ: ** {ALIVE_NAME}\nᴥ ** Bσт Vᴇʀ: ** 7.0\n━ ━ ━ ━ ━ ━ ━ ━ ━ ━\nᴥ ** Sᴜᴘᴘᴏʀᴛ​: ** @KayzuSupport\nᴥ ** Cʜᴀɴɴᴇʟ​: ** @kayzuchannel\n")
     return
 
 with bot:
