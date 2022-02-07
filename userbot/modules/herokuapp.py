@@ -10,7 +10,6 @@ import aiohttp
 import heroku3
 
 from userbot import (
-    ALIVE_NAME,
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
