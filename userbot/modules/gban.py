@@ -2,7 +2,7 @@ from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from userbot import ALIVE_NAME, CMD_HELP, bot
+from userbot import ALIVE_NAME, CMD_HELP, DEVS, bot
 from userbot.events import register
 
 
@@ -24,9 +24,7 @@ async def get_full_user(event):
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
-            if isinstance(
-                    probable_user_mention_entity,
-                    MessageEntityMentionName):
+            if isinstance(probable_user_mention_entity, MessageEntityMentionName):
                 user_id = probable_user_mention_entity.user_id
                 user_obj = await event.client.get_entity(user_id)
                 return user_obj
@@ -34,7 +32,7 @@ async def get_full_user(event):
             user_obj = await event.client.get_entity(user)
         except Exception as err:
             return await event.edit(
-                "`Terjadi Kesalahan... Mohon Lapor Ke` @Kayzuuuuu", str(err)
+                "`Terjadi Kesalahan... Mohon Lapor Ke Grup` @skyzusupport", str(err)
             )
     return user_obj, extra
 
@@ -81,7 +79,7 @@ async def handler(tele):
 
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
-@register(incoming=True, from_users=1904791338, pattern=r"^\.cgban(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cgban(?: |$)(.*)")
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -91,7 +89,7 @@ async def gben(userbot):
     else:
         dark = await dc.edit("`Memproses Global Banned Pengguna Ini!!`")
     me = await userbot.client.get_me()
-    await dark.edit(f"`Global Banned Akan Segera Aktif!!!`")
+    await dark.edit(f"`Global Banned Akan Segera Aktif Tuan!!!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -111,9 +109,9 @@ async def gben(userbot):
     except BaseException:
         return await dark.edit(f"`Terjadi Kesalahan`")
     if user:
-        if user.id in 1904791338:
+        if user.id in DEVS:
             return await dark.edit(
-                f"`Anda Tidak Bisa Melakukan Global Banned, Karena dia pembuatku🤪`"
+                f"`Anda Tidak Bisa Melakukan Global Banned, Karena dia pembuatku 🤪`"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
@@ -132,7 +130,7 @@ async def gben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await dark.edit(f"`Global Banned Aktif ✅`")
+                await dark.edit(f"`Global Banned Si Jamet Aktif Tuan✅`")
             except BaseException:
                 b += 1
     else:
@@ -150,8 +148,7 @@ async def gben(userbot):
 
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
-@register(incoming=True, from_users=1904791338,
-          pattern=r"^\.cungban(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cungban(?: |$)(.*)")
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -162,7 +159,7 @@ async def gunben(userbot):
         dark = await dc.edit("`Membatalkan Perintah Global Banned`")
     me = await userbot.client.get_me()
     await dark.edit(
-        f"`Memulai Membatalkan Perintah Global Banned, Pengguna Ini Akan Dapat Bergabung Ke Grup Anda`"
+        f"`Memulai Membatalkan Perintah Global Banned, Jangan Jadi Jamet Lagi Ya!!!`"
     )
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
@@ -183,9 +180,9 @@ async def gunben(userbot):
     except BaseException:
         return await dark.edit("`Terjadi Kesalahan`")
     if user:
-        if user.id in 1904791338:
+        if user.id in DEVS:
             return await dark.edit(
-                "**Pengguna Ini tidak bisa di Blacklist, Karna Dia adalah pembuatku🤪**"
+                "**Pengguna Ini tidak bisa di Blacklist, Karna Dia adalah pembuatku** 🤪"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
