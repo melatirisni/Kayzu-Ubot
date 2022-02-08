@@ -24,9 +24,7 @@ async def get_full_user(event):
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
-            if isinstance(
-                    probable_user_mention_entity,
-                    MessageEntityMentionName):
+            if isinstance(probable_user_mention_entity, MessageEntityMentionName):
                 user_id = probable_user_mention_entity.user_id
                 user_obj = await event.client.get_entity(user_id)
                 return user_obj
