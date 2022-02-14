@@ -35,7 +35,6 @@ async def typewriter(typew):
     await typew.edit("**PEMERINTAH OP ABIEZZZZZZZ...🔥 ADA LAWAN KAH NYET? 😏**")
 
 
-
 CMD_HELP.update(
     {
         "pmrth": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pmt\
