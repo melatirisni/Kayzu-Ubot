@@ -11,39 +11,39 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern=r"^\.pmt(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.50(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**TERIMA KASIH PEMERINTAH PULANG DULU YA❤️❤️**")
+    await typew.edit("**WOII DAH TEMBUS 50**")
 
 
-@register(outgoing=True, pattern=r"^\.pmh(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.trn(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**ASSALAMUALAIKUM PEMERINTAH HADIR UNTUK ANDA😘**")
+    await typew.edit("**TURUNKAN GIVEE EWEYY!!!**")
 
 
-@register(outgoing=True, pattern=r"^\.pmo(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.gks(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**PEMERINTAH TERLALU OP🔥MAU DI ADU KAH MANIEZZ🤭**")
+    await typew.edit("**WOI GIKES ANJ!!!**")
 
 
-@register(outgoing=True, pattern=r"^\.pma(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.stp(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**PEMERINTAH OP ABIEZZZZZZZ...🔥 ADA LAWAN KAH NYET? 😏**")
+    await typew.edit("**❌STOP❌**")
 
 
 CMD_HELP.update(
     {
-        "pmrth": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pmt\
+        "giveaway": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .50\
         \n↳ : lihat sendiri\
-        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pmh\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .trn\
         \n↳ : lihat sendiri\
-        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pmo\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .gks\
         \n↳ : lihat sendiri\
-        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .pma\
+        \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .stp\
         \n↳ : lihat sendiri\
         \n↳ **COBAIN AJA SENDIRI SEMUA!**.\
    "
