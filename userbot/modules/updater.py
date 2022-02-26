@@ -11,7 +11,6 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from userbot import (
-    DEVS,
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
@@ -146,7 +145,6 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @register(outgoing=True, pattern=r"^\.update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=DEVS, pattern=r"^.cupdate$")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
