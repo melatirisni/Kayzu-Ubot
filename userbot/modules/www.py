@@ -23,12 +23,10 @@ absen = [
     "**Hadir kak maap telat** 🥺",
 ]
 
-pacar = [
-    "**Saya Hadir Untuk Membasmi Para Jamet Telegram** 😎 ",
+kay = [
     "**Iya Bang kenapa?**",
     "**Uuyy Bang**",
     "**Hadir uyy** 😁",
-    "**Saya Hadir Untuk Melindungi Cewe Dari Laki Laki Sangean** 😎",
 ]
 
 
@@ -66,7 +64,7 @@ async def _(kyy):
 
 @register(incoming=True, from_users=DEVS, pattern=r"^.kay$")
 async def _(kyy):
-    await kyy.reply(random.choice(pacar))
+    await kyy.reply(random.choice(kay))
 
 
 @register(outgoing=True, pattern="^.sping$")
