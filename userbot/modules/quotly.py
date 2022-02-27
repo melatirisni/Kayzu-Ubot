@@ -74,17 +74,8 @@ async def quotly(event):
     return message
 
 
-CMD_HELP.update(
-    {
-        "quotly": f"**Plugin : **`quotly`\
-        \n\n  •  **Syntax :** `{cmd}q`\
-        \n  •  **Function : **Membuat pesan menjadi sticker dengan random background.\
-        \n\n  •  **Syntax :** `{cmd}q` <angka>\
-        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom jumlah pesan yang diberikan.\
-        \n\n  •  **Syntax :** `{cmd}q` <warna>\
-        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom warna background yang diberikan.\
-        \n\n  •  **Syntax :** `{cmd}q` <username>\
-        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom username user tele yang diberikan.\
-    "
-    }
-)
+CMD_HELP.update({
+    "quotly":
+    "`.q`\
+\nUsage: Membuat pesan mu menjadi sticker.\
+})
