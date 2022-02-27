@@ -2,13 +2,8 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-import random
-import requests
-from asyncio.exceptions import TimeoutError
 
-from telethon import events
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import CMD_HELP, bot
+from userbot import CMD_HELP
 from userbot.events import register
 from userbot.utils.misc import create_quotly
 from userbot.utils import edit_delete, edit_or_reply
