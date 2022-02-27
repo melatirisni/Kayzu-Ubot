@@ -7,13 +7,13 @@ from random import choice
 
 from telethon.tl.functions.users import GetFullUserRequest
 
+from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.utils import edit_delete, edit_or_reply, kay_cmd
 from userbot.utils.misc import create_quotly
-from userbot.utils import edit_delete, edit_or_reply
 
 
-@register(outgoing=True, pattern=r"^\.q")
+@kay_cmd(pattern="q( (.*)|$)")
 async def quotly(event):
     match = event.pattern_match.group(1).strip()
     if not event.is_reply:
@@ -68,7 +68,7 @@ async def quotly(event):
         file = await create_quotly(reply_, bg=match, reply=replied_to, sender=user)
     except Exception as er:
         return await msg.edit(f"**ERROR:** `{er}`")
-    message = await reply.reply("Quotly by Kayzu-Ubot", file=file)
+    message = await reply.reply("Quotly by Kyy-Userbot", file=file)
     remove(file)
     await msg.delete()
     return message
@@ -76,8 +76,15 @@ async def quotly(event):
 
 CMD_HELP.update(
     {
-        "quotly": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .q\
-        \n↳ : lihat sendiri\
-   "
+        "quotly": f"**Plugin : **`quotly`\
+        \n\n  •  **Syntax :** `{cmd}q`\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan random background.\
+        \n\n  •  **Syntax :** `{cmd}q` <angka>\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom jumlah pesan yang diberikan.\
+        \n\n  •  **Syntax :** `{cmd}q` <warna>\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom warna background yang diberikan.\
+        \n\n  •  **Syntax :** `{cmd}q` <username>\
+        \n  •  **Function : **Membuat pesan menjadi sticker dengan custom username user tele yang diberikan.\
+    "
     }
 )
