@@ -78,6 +78,6 @@ CMD_HELP.update(
     {
         "quotly": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .q\
         \n↳ : lihat sendiri\
-"
+   "
     }
 )
