@@ -8,8 +8,6 @@ from userbot.events import register
 from userbot.utils.misc import create_quotly
 from userbot.utils import edit_delete, edit_or_reply
 
-from .carbon import all_col
-
 
 @register(pattern="q( (.*)|$)")
 async def quotly(event):
