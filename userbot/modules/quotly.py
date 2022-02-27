@@ -2,6 +2,10 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
+from os import remove
+from random import choice
+
+from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import CMD_HELP
 from userbot.events import register
