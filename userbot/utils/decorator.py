@@ -37,7 +37,6 @@ def kay_cmd(
     if "disable_edited" in args:
         del args["disable_edited"]
 
-
     if pattern is not None:
         global kay_reg
         global sudo_reg
