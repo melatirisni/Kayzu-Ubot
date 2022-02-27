@@ -76,8 +76,8 @@ async def quotly(event):
 
 CMD_HELP.update(
     {
-        "quotly":
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.q`\
-\n↳: Mengubah Pesan Menjadi sticker.\"
-     }
+        "quotly": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: .q\
+        \n↳ : lihat sendiri\
+"
+    }
 )
