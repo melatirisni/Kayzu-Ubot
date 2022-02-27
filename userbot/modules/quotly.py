@@ -13,7 +13,7 @@ from userbot.utils.misc import create_quotly
 from userbot.utils import edit_delete, edit_or_reply
 
 
-@register(pattern="q( (.*)|$)")
+@register(outgoing=True, pattern=r"^\.q")
 async def quotly(event):
     match = event.pattern_match.group(1).strip()
     if not event.is_reply:
