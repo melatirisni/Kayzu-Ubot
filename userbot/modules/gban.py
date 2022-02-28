@@ -223,7 +223,7 @@ async def gunben(userbot):
 
 CMD_HELP.update(
     {
-      "gban": f"**Plugin : **`gban`\
+        "gban": f"**Plugin : **`gban`\
       \n\n  •  **Syntax :** `{cmd}gban`\
       \n  •  **Function :** Melakukan Banned Secara Global Ke Semua Grup Dimana Anda Sebagai Admin.\
       \n\n  •  **Syntax :** `{cmd}ungban`\
