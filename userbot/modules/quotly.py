@@ -12,6 +12,8 @@ from userbot import CMD_HELP
 from userbot.utils import edit_delete, edit_or_reply, kay_cmd
 from userbot.utils.misc import create_quotly
 
+from .carbon import all_col
+
 
 @kay_cmd(pattern="q( (.*)|$)")
 async def quotly(event):
