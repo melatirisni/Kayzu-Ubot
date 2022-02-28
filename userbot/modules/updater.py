@@ -11,7 +11,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from userbot import CMD_HANDLER as cmd
 from userbot import (
-    DEVS
+    DEVS,
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
