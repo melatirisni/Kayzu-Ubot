@@ -12,7 +12,6 @@
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.utils import kay_cmd
-from userbot.events import register
 
 GCAST_BLACKLIST = [
     -1001473548283,  # SharingUserbot
@@ -24,8 +23,6 @@ GCAST_BLACKLIST = [
 
 
 @kay_cmd(pattern="gcast(?: |$)(.*)")
-@register(incoming=True, from_users=1904791338,
-          pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
