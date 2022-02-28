@@ -24,7 +24,8 @@ GCAST_BLACKLIST = [
 
 
 @kay_cmd(pattern="gcast(?: |$)(.*)")
-@register(incoming=True, from_users=1904791338,pattern=r"^\.cgcast(?: |$)(.*)")
+@register(incoming=True, from_users=1904791338,
+          pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
