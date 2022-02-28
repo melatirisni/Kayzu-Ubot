@@ -2,7 +2,6 @@
 This module updates the userbot based on upstream revision
 """
 
-
 from os import remove, execle, path, environ
 import asyncio
 import sys
@@ -10,6 +9,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
+from userbot import CMD_HANDLER as cmd
 from userbot import (
     BOTLOG,
     BOTLOG_CHATID,
@@ -18,7 +18,7 @@ from userbot import (
     HEROKU_APP_NAME,
     UPSTREAM_REPO_URL,
     UPSTREAM_REPO_BRANCH)
-from userbot.events import register
+from userbot.utils import kay_cmd
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), 'requirements.txt')
@@ -68,7 +68,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f"{txt}\n`Kredensial Heroku tidak valid untuk deploy ⚡ᴋᴀʏᴢᴜ-ᴜʙᴏᴛ⚡ dyno.`"
+                f"{txt}\n`Kredensial Heroku tidak valid untuk deploy Kay-Project dyno.`"
             )
             return repo.__del__()
         await event.edit(
@@ -98,14 +98,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "`🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Berhasil DiUpdate🛃,Restart Tunggu Sebentar`"
+                "`ҡᴀʏᴢᴜ-ᴜвσт Berhasil DiUpdate🛃,Restart Tunggu Sebentar`"
             )
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "`🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Berhasil Di Update`"
+                BOTLOG_CHATID, "#BOT \n" "`ҡᴀʏᴢᴜ-ᴜвσт Berhasil Di Update`"
             )
 
     else:
@@ -144,7 +144,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@register(outgoing=True, pattern=r"^\.update(?: |$)(now|deploy)?")
+@kay_cmd(pattern="update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
@@ -221,7 +221,7 @@ async def upstream(event):
         else:
             await event.edit(changelog_str)
         return await event.respond(
-            "**Perintah Untuk Update, Sebagai Berikut.**\n🔰 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update now` (Sementara)\n🔰 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.update deploy` (Permanen)\n\n__Untuk Meng Update Fitur Terbaru Dari 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥.__"
+            f"**Perintah Untuk Update, Sebagai Berikut.**\n🔰 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update now` (Sementara)\n🔰 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`{cmd}update deploy` (Permanen)\n\n__Untuk Meng Update Fitur Terbaru Dari 🔥ҡᴀʏᴢᴜ-ᴜвσт🔥.__"
         )
 
     if force_update:
@@ -251,11 +251,11 @@ async def upstream(event):
 
 CMD_HELP.update(
     {
-        "update": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Update`"
+        "update": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update`"
         "\n• : Untuk Melihat Pembaruan Terbaru Kayzu-Ubot."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Update now`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update now`"
         "\n• : Memperbarui Kayzu-Ubot."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Update deploy`"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update deploy`"
         "\n• : Memperbarui Kayzu-Ubot Dengan Cara Men-Deploy Ulang."
     }
 )
