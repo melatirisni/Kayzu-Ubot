@@ -147,8 +147,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @kay_cmd(pattern="update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=DEVS,
-          pattern=r"^\.cupdate(?: |$)(now|deploy)?")
+@register(incoming=True, from_users=DEVS,pattern=r"^\.cupdate(?: |$)(now|all)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
