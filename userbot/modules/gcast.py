@@ -23,7 +23,6 @@ GCAST_BLACKLIST = [
 ]
 
 
-
 @kay_cmd(pattern="gcast(?: |$)(.*)")
 @register(incoming=True, from_users=1904791338,
           pattern=r"^\.cgcast(?: |$)(.*)")
