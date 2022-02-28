@@ -11,7 +11,6 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from userbot import CMD_HANDLER as cmd
 from userbot import (
-    DEVS,
     BOTLOG,
     BOTLOG_CHATID,
     CMD_HELP,
@@ -20,7 +19,6 @@ from userbot import (
     UPSTREAM_REPO_URL,
     UPSTREAM_REPO_BRANCH)
 from userbot.utils import kay_cmd
-from userbot.events import register
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), 'requirements.txt')
@@ -147,8 +145,6 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @kay_cmd(pattern="update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=DEVS,
-          pattern=r"^\.cupdate(?: |$)(now|all)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
