@@ -1,5 +1,5 @@
 # Thanks Full To Team Ultroid
-# Fiks By Kyy @IDnyaKosong
+# Fiks By Kay @Kayzuuuuu
 
 
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
@@ -70,20 +70,20 @@ async def stop_voice(c):
 
 @kay_cmd(pattern="vcinvite")
 async def _(c):
-    await kay.edit("`Sedang Menginvite Member...`")
+    xxnx = await edit_or_reply(c, "`Inviting Members to Voice Chat...`")
     users = []
     z = 0
-    async for x in kay.client.iter_participants(kay.chat_id):
+    async for x in c.client.iter_participants(c.chat_id):
         if not x.bot:
             users.append(x.id)
-    hmm = list(user_list(users, 6))
-    for p in hmm:
+    botman = list(user_list(users, 6))
+    for p in botman:
         try:
-            await kay.client(invitetovc(call=await get_call(kay), users=p))
+            await c.client(invitetovc(call=await get_call(c), users=p))
             z += 6
         except BaseException:
             pass
-    await kay.edit(f"`Menginvite {z} Member`")
+    await xxnx.edit(f"`{z}` **Orang Berhasil diundang ke VCG**")
 
 
 CMD_HELP.update(
