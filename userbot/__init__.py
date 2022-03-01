@@ -372,8 +372,8 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = str(pybase64.b64decode("QEtheXp1U3VwcG9ydA=="))[2:15]
-    checker = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:16]
+    gocheck = pybase64.b64decode("QEtheXp1U3VwcG9ydA==")
+    checker = pybase64.b64decode("QGtheXp1Y2hhbm5lbA==")
     Input_gocheck = gocheck.decode('utf-8')
     Input_checker = checker.decode('utf-8')
     try:
