@@ -164,13 +164,14 @@ async def pingme(pong):
     await pong.edit("**★**")
     await pong.edit("**★★**")
     await pong.edit("**★★★**")
+    await pong.edit("😘")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
         f"**Pong!!!**\n"
-        f"**Pinger** ⪼ "
+        f"**Pinger** ~ "
         f"`%sms` \n"
-        f"**Uptime** ⪼ "
+        f"**Uptime** ~ "
         f"`{uptime}` \n" % (duration)
     )
 
@@ -227,7 +228,7 @@ async def pingme(pong):
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit(f"**✨KayName : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
+    await pong.edit(f"**🔥OwnName : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
 
 
 @kay_cmd(pattern="pink$")
