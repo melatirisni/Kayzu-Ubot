@@ -6,6 +6,7 @@ from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
 from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
+from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
 from telethon.tl import types
 from telethon.utils import get_display_name
@@ -24,10 +25,10 @@ def vcmention(user):
 
 
 async def get_call(kay):
-    kay = await kay.client(getchat(kay.chat_id))
-    xx = await kay.client(getvc(kay.full_chat.call))
-    xx = await kay.client(getvc(kay.full_chat.call, limit=1))
-    return xx.call
+    kay = await kyy.client(getchat(kay.chat_id))
+    await kay.client(getvc(kay.full_chat.call))
+    await kay.client(getvc(kay.full_chat.call, limit=1))
+    return hehe.call
 
 
 def user_list(l, n):
@@ -36,35 +37,53 @@ def user_list(l, n):
 
 
 @kay_cmd(pattern="startvc$")
-async def start_voice(c):
-    chat = await c.get_chat()
+async def start_voice(kay):
+    chat = await kay.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await c.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
+        await kay.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
         return
     try:
         await c.client(startvc(c.chat_id))
-        await c.edit("`Memulai Obrolan Suara`")
+        await kay.edit("`Memulai Obrolan Suara`")
     except Exception as ex:
-        await c.edit(f"**ERROR:** `{ex}`")
+        await kay.edit(f"**ERROR:** `{ex}`")
 
 
-@kay_cmd(pattern="stopvc$")
-async def stop_voice(c):
-    chat = await c.get_chat()
+@kyy_cmd(pattern="stopvc$")
+async def stop_voice(kay):
+    chat = await kay.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await c.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
+        await kay.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
         return
     try:
-        await c.client(stopvc(await get_call(c)))
-        await c.edit("`Mematikan Obrolan Suara`")
+        await kay.client(stopvc(await get_call(kay)))
+        await kay.edit("`Mematikan Obrolan Suara`")
     except Exception as ex:
-        await c.edit(f"**ERROR:** `{ex}`")
+        await kay.edit(f"**ERROR:** `{ex}`")
+
+
+@kay_cmd(pattern="vcinvite")
+async def _(kay):
+    await kay.edit("`Sedang Menginvite Member...`")
+    users = []
+    z = 0
+    async for x in kay.client.iter_participants(kay.chat_id):
+        if not x.bot:
+            users.append(x.id)
+    hmm = list(user_list(users, 6))
+    for p in hmm:
+        try:
+            await kay.client(invitetovc(call=await get_call(kay), users=p))
+            z += 6
+        except BaseException:
+            pass
+    await kay.edit(f"`Menginvite {z} Member`")
 
 
 CMD_HELP.update(
@@ -72,6 +91,8 @@ CMD_HELP.update(
         "vcg": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}startvc`\
          \n↳ : Memulai Obrolan Suara dalam Group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
-         \n↳ : Menghentikan Obrolan Suara Pada Group."
+         \n↳ : `Menghentikan Obrolan Suara Pada Group.`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vcinvite`\
+         \n↳ : Invite semua member yang berada di group."
     }
 )
