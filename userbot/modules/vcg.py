@@ -68,31 +68,12 @@ async def stop_voice(c):
         await c.edit(f"**ERROR:** `{ex}`")
 
 
-@kay_cmd(pattern="vcinvite")
-async def _(c):
-    xxnx = await edit_or_reply(c, "`Inviting Members to Voice Chat...`")
-    users = []
-    z = 0
-    async for x in c.client.iter_participants(c.chat_id):
-        if not x.bot:
-            users.append(x.id)
-    botman = list(user_list(users, 6))
-    for p in botman:
-        try:
-            await c.client(invitetovc(call=await get_call(c), users=p))
-            z += 6
-        except BaseException:
-            pass
-    await xxnx.edit(f"`{z}` **Orang Berhasil diundang ke VCG**")
-
 
 CMD_HELP.update(
     {
         "vcg": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}startvc`\
          \n↳ : Memulai Obrolan Suara dalam Group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
-         \n↳ : `Menghentikan Obrolan Suara Pada Group.`\
-         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vcinvite`\
-         \n↳ : Invite semua member yang berada di group."
+         \n↳ : `Menghentikan Obrolan Suara Pada Group.`\"
     }
 )
