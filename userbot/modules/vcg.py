@@ -52,7 +52,7 @@ async def start_voice(kay):
         await kay.edit(f"**ERROR:** `{ex}`")
 
 
-@kyy_cmd(pattern="stopvc$")
+@kay_cmd(pattern="stopvc$")
 async def stop_voice(kay):
     chat = await kay.get_chat()
     admin = chat.admin_rights
