@@ -108,13 +108,12 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await event.client.send_message(
                 BOTLOG_CHATID, "#BOT \n" "`ҡᴀʏᴢᴜ-ᴜвσт Berhasil Di Update`"
             )
-
-    else:
-        await event.edit(
-            "`[HEROKU]:" "\nHarap Siapkan Variabel` **HEROKU_API_KEY** `.`"
-        )
-        await asyncio.sleep(10)
-        await event.delete()
+       else:
+            await event.edit(
+                "`[HEROKU]:" "\nHarap Siapkan Variabel` **HEROKU_API_KEY** `.`"
+            )
+            await asyncio.sleep(10)
+            await event.delete()
     return
 
 
@@ -146,8 +145,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @kay_cmd(pattern="update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=1904791338,
-          pattern=r"^\.cupdate(?: |$)(now|deploy)?")
+@register(incoming=True, from_users=1904791338,pattern=r"^\.cupdate(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
