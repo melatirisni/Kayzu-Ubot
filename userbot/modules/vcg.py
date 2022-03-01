@@ -30,6 +30,7 @@ async def get_call(kay):
     xx = await kay.client(getvc(kay.full_chat.call, limit=1))
     return xx.call
 
+
 def user_list(l, n):
     for i in range(0, len(l), n):
         yield l[i: i + n]
