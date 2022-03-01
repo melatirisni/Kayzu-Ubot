@@ -25,7 +25,7 @@ def vcmention(user):
 
 
 async def get_call(kay):
-    kay = await kyy.client(getchat(kay.chat_id))
+    kay = await kay.client(getchat(kay.chat_id))
     await kay.client(getvc(kay.full_chat.call))
     await kay.client(getvc(kay.full_chat.call, limit=1))
     return hehe.call
@@ -46,7 +46,7 @@ async def start_voice(kay):
         await kay.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
         return
     try:
-        await c.client(startvc(c.chat_id))
+        await kay.client(startvc(kay.chat_id))
         await kay.edit("`Memulai Obrolan Suara`")
     except Exception as ex:
         await kay.edit(f"**ERROR:** `{ex}`")
