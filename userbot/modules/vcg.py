@@ -26,9 +26,9 @@ def vcmention(user):
 
 async def get_call(kay):
     kay = await kay.client(getchat(kay.chat_id))
-    await kay.client(getvc(kay.full_chat.call, limit=1))
-    return hehe.call
-
+    xx = await kay.client(getvc(kay.full_chat.call))
+    xx = await kay.client(getvc(kay.full_chat.call, limit=1))
+    return xx.call
 
 def user_list(l, n):
     for i in range(0, len(l), n):
@@ -68,7 +68,7 @@ async def stop_voice(c):
 
 
 @kay_cmd(pattern="vcinvite")
-async def _(kay):
+async def _(c):
     await kay.edit("`Sedang Menginvite Member...`")
     users = []
     z = 0
