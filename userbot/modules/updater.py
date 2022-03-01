@@ -108,6 +108,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await event.client.send_message(
                 BOTLOG_CHATID, "#BOT \n" "`ҡᴀʏᴢᴜ-ᴜвσт Berhasil Di Update`"
             )
+     
      else:
         await event.edit(
             "`[HEROKU]:" "\nHarap Siapkan Variabel` **HEROKU_API_KEY** `.`"
