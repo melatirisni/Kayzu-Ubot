@@ -73,6 +73,6 @@ CMD_HELP.update(
         "vcg": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}startvc`\
          \n↳ : Memulai Obrolan Suara dalam Group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
-n↳: `Menghentikan Obrolan Suara Pada Group.`\"
+         \n↳ : Menghentikan Obrolan Suara Pada Group."
     }
 )
