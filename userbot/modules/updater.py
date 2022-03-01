@@ -10,7 +10,12 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from userbot import CMD_HELP, BOTLOG, CMD_HANDLER as cmd
-from userbot import (BOTLOG_CHATID, HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO_URL, UPSTREAM_REPO_BRANCH)
+from userbot import (
+    BOTLOG_CHATID,
+    HEROKU_API_KEY,
+    HEROKU_APP_NAME,
+    UPSTREAM_REPO_URL,
+    UPSTREAM_REPO_BRANCH)
 from userbot.utils import kay_cmd
 from userbot.events import register
 
