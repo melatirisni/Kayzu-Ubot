@@ -9,9 +9,8 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from userbot import CMD_HELP, CMD_HANDLER as cmd
+from userbot import CMD_HELP, BOTLOG, CMD_HANDLER as cmd
 from userbot import (
-    BOTLOG,
     BOTLOG_CHATID,
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
@@ -145,8 +144,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @kay_cmd(pattern="update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=1904791338,
-          pattern=r"^\.cupdate(?: |$)(now|deploy)?")
+@register(incoming=True, from_users=1904791338,pattern=r"^\.cupdate(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     await event.edit("**Mengecek Pembaruan, Silakan Menunggu....**")
