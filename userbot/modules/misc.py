@@ -111,11 +111,11 @@ async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
         "┏━━━━━━━━━━━━━━━━━━━\n"
-        "➥**яєᴘσ ᴜʙσᴛ :** [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)\n"
-        "➥**σᴡɴєя ʙσᴛ :** [ᴋᴀʏᴢᴜ](t.me/Kayzuuuuu)\n"
-        "┣━━━━━━━━━━━━━━━━━━━━\n"
-        "➥**ꜱᴜᴘᴘσяᴛ   :** [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/KayzuSupport)\n"
-        "➥**ᴄʜᴀɴɴєʟ   :** [ᴄʜᴀɴɴᴇʟ](https://t.me/kayzuchannel)\n"
+        "┣**яєᴘσ ᴜʙσᴛ :** [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)\n"
+        "┣**σᴡɴєя ʙσᴛ :** [ҡᴀʏ](t.me/Kayzuuuuu)\n"
+        "┣━━━━━━━━━━━━━━━━━━━\n"
+        "┣**ꜱᴜᴘᴘσяᴛ   :** [ꜱᴜᴘᴘᴏʀᴛ](https://t.me/KayzuSupport)\n"
+        "┣**ᴄʜᴀɴɴєʟ   :** [ᴄʜᴀɴɴᴇʟ](https://t.me/kayzuchannel)\n"
         "┗━━━━━━━━━━━━━━━━━━━\n"
     )
 
