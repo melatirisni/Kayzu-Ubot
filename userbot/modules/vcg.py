@@ -22,7 +22,7 @@ def vcmention(user):
 
 
 async def get_call(c):
-    kay = await c.client(getchat(c.chat_id))
+    await c.client(getchat(c.chat_id))
     hehe = await c.client(getvc(c.full_chat.call, limit=1))
     return hehe.call
 
@@ -55,7 +55,7 @@ async def stop_voice(c):
     chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
-    
+
     if not admin and not creator:
         await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
         return
