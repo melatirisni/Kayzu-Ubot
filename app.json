@@ -22,11 +22,6 @@
       "description": "Dapatkan Api Hash Di Web my.telegram.org",
       "required": true
     },
-    "ALIVE_LOGO": {
-      "description": "Gambar dalam module .alive",
-      "value": "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg",
-      "required": false
-    },
      "STRING_SESSION": {
       "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @Kayzuuuuu di telegram",
       "required": true
@@ -41,10 +36,6 @@
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "required": true
-    },
-    "G_BAN_LOGGER_GROUP": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "required": true
     },
