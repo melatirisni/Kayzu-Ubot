@@ -9,6 +9,7 @@ import os
 import aiohttp
 import heroku3
 
+from userbot import CMD_HANDLER as cmd
 from userbot import (
     BOTLOG,
     BOTLOG_CHATID,
@@ -16,7 +17,7 @@ from userbot import (
     HEROKU_API_KEY,
     HEROKU_APP_NAME,
 )
-from userbot.events import register
+from userbot.utils import kay_cmd
 
 heroku_api = "https://api.heroku.com"
 if HEROKU_APP_NAME is not None and HEROKU_API_KEY is not None:
@@ -32,7 +33,7 @@ else:
 """
 
 
-@register(outgoing=True, pattern=r"^.(get|del) var(?: |$)(\w*)")
+@kay_cmd(pattern="(get|del) var(?: |$)(\\w*)")
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -115,7 +116,7 @@ async def variable(var):
             return True
 
 
-@register(outgoing=True, pattern=r"^.set var (\w*) ([\s\S]*)")
+@kay_cmd(pattern=r'set var (\w*) ([\s\S]*)')
 async def set_var(var):
     await var.edit(
         "`Sedang Menyetel Config Vars ヅ`"
@@ -152,7 +153,7 @@ async def set_var(var):
 """
 
 
-@register(outgoing=True, pattern=r"^.usage(?: |$)")
+@kay_cmd(pattern="usage(?: |$)")
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -206,12 +207,12 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await dyno.edit(
-                f"● **𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚂𝙸 𝙳𝚈𝙽𝙾 𝙷𝙴𝚁𝙾𝙺𝚄 :** \n"
+                f"⚡**𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚂𝙸 𝙳𝚈𝙽𝙾 𝙷𝙴𝚁𝙾𝙺𝚄 :** \n"
                 f"<═══════════════════> \n"
-                f"● 𝙳𝚢𝚗𝚘 𝚂𝚊𝚊𝚝 𝙸𝚗𝚒 : \n"
-                f"ᴥ {AppHours} 𝙹𝚊𝚖​ >> {AppMinutes} 𝙼𝚎𝚗𝚒𝚝​ [ {AppPercentage}% ] \n"
-                f"● 𝙳𝚢𝚗𝚘 𝙱𝚞𝚕𝚊𝚗 𝙸𝚗𝚒 : \n"
-                f"ᴥ {hours} 𝙹𝚊𝚖​ >> {minutes} 𝙼𝚎𝚗𝚒𝚝​ [ {percentage}% ] \n"
+                f"❃ 𝙳𝚢𝚗𝚘 𝚂𝚊𝚊𝚝 𝙸𝚗𝚒 : \n"
+                f"° {AppHours} 𝙹𝚊𝚖​ >> {AppMinutes} 𝙼𝚎𝚗𝚒𝚝​ [ {AppPercentage}% ] \n"
+                f"❃ 𝙳𝚢𝚗𝚘 𝙱𝚞𝚕𝚊𝚗 𝙸𝚗𝚒 : \n"
+                f"° {hours} 𝙹𝚊𝚖​ >> {minutes} 𝙼𝚎𝚗𝚒𝚝​ [ {percentage}% ] \n"
                 f"<═══════════════════> \n"
             )
             await asyncio.sleep(20)
@@ -219,7 +220,7 @@ async def dyno_usage(dyno):
             return True
 
 
-@register(outgoing=True, pattern=r"^\.logs")
+@kay_cmd(pattern="logs")
 async def _(dyno):
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
@@ -242,14 +243,16 @@ async def _(dyno):
     return os.remove("logs.txt")
 
 
-CMD_HELP.update({"herokuapp": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.usage`"
+CMD_HELP.update({"herokuapp": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}usage`"
                  "\n↳ : Check Quota Dyno Heroku"
-                 "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.set var <NEW VAR> <VALUE>`"
+                 f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}logs`"
+                 "\n↳ : Melihat Logs Heroku Anda"
+                 f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}set var <NEW VAR> <VALUE>`"
                  "\n↳ : Tambahkan Variabel Baru Atau Memperbarui Variabel"
                  "\nSetelah Menyetel Variabel Tersebut, Rose-Userbot Akan Di Restart."
-                 "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.get var atau .get var <VAR>`"
+                 f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}get var atau .get var <VAR>`"
                  "\n↳ : Dapatkan Variabel Yang Ada, !!PERINGATAN!! Gunakanlah Di Grup Privasi Anda."
                  "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
-                 "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.del var <VAR>`"
+                 f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}del var <VAR>`"
                  "\n↳ : Menghapus Variabel Yang Ada"
                  "\nSetelah Menghapus Variabel, Bot Akan Di Restart."})
