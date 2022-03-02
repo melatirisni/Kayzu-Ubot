@@ -1,4 +1,4 @@
-# ReCode by @Kayyzyu
+# ReCode by @Kayzuuuuu
 # FROM Kayzyu-Ubot <https://github.com/Kayzyu/Kayzu-Ubot>
 # KONTOLLLLLLL
 
