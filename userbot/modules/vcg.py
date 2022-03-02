@@ -21,9 +21,9 @@ def vcmention(user):
     return f"[{full_name}](tg://user?id={user.id})"
 
 
-async def get_call(kay):
-    kay = await kay.client(getchat(kay.chat_id))
-    hehe = await kay.client(getvc(kay.full_chat.call, limit=1))
+async def get_call(c):
+    kay = await c.client(getchat(c.chat_id))
+    hehe = await c.client(getvc(c.full_chat.call, limit=1))
     return hehe.call
 
 
@@ -46,15 +46,16 @@ async def start_voice(c):
         await c.client(startvc(c.chat_id))
         await edit_or_reply(c, "`Voice Chat Started...`")
     except Exception as ex:
-        await edit_delete(c, f"**ERROR:** `{ex}`")
+        await edit_delete(f"**ERROR:** `{ex}`")
 
 
 @kay_cmd(pattern="stopvc$")
-async def stop_voice(kay):
-    chat = await kay.get_chat()
+async def stop_voice(c):
+    me = await c.client.get_me()
+    chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
-
+    
     if not admin and not creator:
         await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
         return
