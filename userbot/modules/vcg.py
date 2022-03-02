@@ -8,11 +8,8 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
-from telethon.tl import types
-from telethon.utils import get_display_name
-
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kay_cmd
+from userbot.utils import edit_delete, edit_or_reply, kay_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
@@ -36,19 +33,20 @@ def user_list(l, n):
 
 
 @kay_cmd(pattern="startvc$")
-async def start_voice(kay):
-    chat = await kay.get_chat()
+async def start_voice(c):
+    me = await c.client.get_me()
+    chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await kay.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
         return
     try:
-        await kay.client(startvc(kay.chat_id))
-        await kay.edit("`Memulai Obrolan Suara`")
+        await c.client(startvc(c.chat_id))
+        await edit_or_reply(c, "`Voice Chat Started...`")
     except Exception as ex:
-        await kay.edit(f"**ERROR:** `{ex}`")
+        await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
 @kay_cmd(pattern="stopvc$")
@@ -58,31 +56,31 @@ async def stop_voice(kay):
     creator = chat.creator
 
     if not admin and not creator:
-        await kay.edit(f"**Maaf {ALIVE_NAME} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
         return
     try:
-        await kay.client(stopvc(await get_call(kay)))
-        await kay.edit("`Mematikan Obrolan Suara`")
+        await c.client(stopvc(await get_call(c)))
+        await edit_or_reply(c, "`Voice Chat Stopped...`")
     except Exception as ex:
-        await kay.edit(f"**ERROR:** `{ex}`")
+        await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
 @kay_cmd(pattern="vcinvite")
-async def _(kay):
-    await kay.edit("`Sedang Menginvite Member...`")
+async def _(c):
+    xxnx = await edit_or_reply(c, "`Inviting Members to Voice Chat...`")
     users = []
     z = 0
-    async for x in kay.client.iter_participants(kay.chat_id):
+    async for x in c.client.iter_participants(c.chat_id):
         if not x.bot:
             users.append(x.id)
-    hmm = list(user_list(users, 6))
-    for p in hmm:
+    botman = list(user_list(users, 6))
+    for p in botman:
         try:
-            await kay.client(invitetovc(call=await get_call(kay), users=p))
+            await c.client(invitetovc(call=await get_call(c), users=p))
             z += 6
         except BaseException:
             pass
-    await kay.edit(f"`Menginvite {z} Member`")
+    await xxnx.edit(f"`{z}` **Orang Berhasil diundang ke VCG**")
 
 
 CMD_HELP.update(
