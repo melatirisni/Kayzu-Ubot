@@ -215,7 +215,7 @@ KAY_TEKS_KUSTOM = os.environ.get("KAY_TEKS_KUSTOM", "I'am Using Kayzu-Ubot🔥")
 START_WELCOME = os.environ.get("START_WELCOME", None)
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Kay")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
