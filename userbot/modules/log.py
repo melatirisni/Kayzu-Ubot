@@ -4,18 +4,15 @@
 
 import asyncio
 
-from userbot import BOTLOG_CHATID
-from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, LOGS, bot
+from telethon import events
+
+from userbot import BOTLOG_CHATID, CMD_HANDLER, CMD_HELP, LOGS, bot as cmd
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
-from userbot.modules.vcplugin import vcmention
-from userbot.utils import (
-    _format,
-    edit_delete,
-    edit_or_reply,
-    kay_cmd,
-)
+from userbot.modules.vcg import vcmention
+from userbot.utils import _format, edit_delete, edit_or_reply
+from userbot.utils.tools import media_type
+from userbot.utils import kay_cmd
 
 
 class LOG_CHATS:
