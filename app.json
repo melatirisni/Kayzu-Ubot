@@ -23,7 +23,7 @@
       "required": true
     },
     "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
+      "description": "Nama anda untuk menunjukan pesan .alive",
       "required": true
     },
      "STRING_SESSION": {
@@ -36,7 +36,7 @@
     },
     "HEROKU_API_KEY": {
       "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
-      "value": "Check Di Heroku Dashboard Mu",
+      "value": "Check Di Heroku Lalu Pengaturan Akun",
       "required": true
     },
     "BOTLOG_CHATID": {
