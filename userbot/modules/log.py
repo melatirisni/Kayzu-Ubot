@@ -6,7 +6,8 @@ import asyncio
 
 from telethon import events
 
-from userbot import BOTLOG_CHATID, CMD_HELP, LOGS, bot as cmd
+from userbot import BOTLOG_CHATID, CMD_HANDLER as cmd
+from userbot import CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.modules.vcg import vcmention
