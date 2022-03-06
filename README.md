@@ -1,4 +1,4 @@
-<h2 align="center">🔥ҡᴀʏᴢᴜ-ᴜвσт🔥
+<h2 align="center">🐣ҡᴀʏ-υвσт🐣
 </h2>
 
 <p align="center">
