@@ -34,12 +34,6 @@ from telethon import Button, events, functions, types
 from telethon.tl.types import InputWebDocument
 from telethon.utils import get_display_name
 
-from .storage import Storage
-
-
-def STORAGE(n):
-    return Storage(Path("data") / n)
-
 
 redis_db = None
 
@@ -115,20 +109,6 @@ DEVS = (
     1904791338,
 )
 
-# Blacklist User for use Kyy-Userbot
-while 0 < 6:
-    _BLACKLIST = get(
-        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
-    )
-    if _BLACKLIST.status_code != 200:
-        if 0 != 5:
-            continue
-        kyyblacklist = []
-        break
-    kyyblacklist = _BLACKLIST.json()
-    break
-
-del _BLACKLIST
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
