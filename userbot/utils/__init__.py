@@ -13,6 +13,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+from .start import startupmessage
 from . import format as _format
 from .format import parse_pre
 from .chrome import chrome, options
@@ -20,9 +21,9 @@ from .decorator import asst_cmd, callback, kay_cmd, kay_handler
 from .google_images_download import googleimagesdownload
 from .progress import progress, CancelProcess
 from .tools import (
+    bash,
     humanbytes,
     reply_id,
-    bash,
     time_formatter,
     human_to_bytes,
     run_cmd, md5,
