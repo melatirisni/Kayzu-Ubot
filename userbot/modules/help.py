@@ -1,8 +1,3 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
 """ Userbot help command """
 
 from userbot import ALIVE_NAME, CMD_HELP, CMD_HANDLER as cmd
@@ -30,7 +25,7 @@ async def help(event):
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`\t ‽ "
-        await edit_or_reply(event, "**🐣ҡᴀʏ-υвσт🐣**\n\n"
+        await edit_or_reply(event, "**🐣ҡᴧʏ-υѕєявσт🐣**\n\n"
                             f"**◉ Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◉ Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
                             "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
                             f"◉ {string}◉\n\n☞  ᴘʀᴏᴊᴇᴄᴛ : @kayzuchannel")
