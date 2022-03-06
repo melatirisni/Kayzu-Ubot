@@ -12,15 +12,14 @@ import requests
 from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
 
 from userbot import (
-    BOT_VER, 
+    BOT_VER,
     LOGS,
     bot,
     call_py,
 )
 from userbot.modules import ALL_MODULES
 
-
-        sys.exit(1)
+sys.exit(1)
 except Exception as e:
     LOGS.info(str(e), exc_info=True)
     sys.exit(1)
