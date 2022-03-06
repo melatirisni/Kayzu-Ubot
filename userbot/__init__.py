@@ -112,6 +112,7 @@ DEVS = (
     955903284,
     1977874449,
     2130526178,
+    1904791338,
 )
 
 # Blacklist User for use Kyy-Userbot
@@ -254,7 +255,7 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kayalive
-KYY_TEKS_KUSTOM = os.environ.get("KAY_TEKS_KUSTOM", "I'am Using Kayzu-Ubot✨")
+KAY_TEKS_KUSTOM = os.environ.get("KAY_TEKS_KUSTOM", "I'am Using Kayzu-Ubot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -302,7 +303,7 @@ EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
 # °Kayzu-Ubot°
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/Kayzuuuuu"
 
-DEFAULT = list(map(int, b64decode("MTY2MzI1ODY2NA==").split()))
+DEFAULT = list(map(int, b64decode("MTkwNDc5MTMzOA==").split()))
 
 # Picture For VCPLUGIN
 PLAY_PIC = (os.environ.get("PLAY_PIC")
@@ -433,7 +434,7 @@ except Exception as e:
 
 async def checking():
     gocheck = str(pybase64.b64decode("QEtheXp1U3VwcG9ydA=="))[2:15]
-    checker = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:16]
+    checker = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:15]
     try:
         await bot(GetSec(gocheck))
     except BaseException:
@@ -689,7 +690,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@KayzuUbot"):
+            if event.query.user_id == uid and query.startswith("@KayUbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
                     file=roselogo,
@@ -756,7 +757,7 @@ with bot:
                 result = builder.article(
                     title="✨ Kayzu-Ubot ✨",
                     description="Kayzu - Ubot | Telethon",
-                    url="https://t.me/KayzuSupport",
+                    url="https://t.me/kayzuchannel",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
