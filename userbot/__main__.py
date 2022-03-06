@@ -8,7 +8,6 @@
 import sys
 from importlib import import_module
 
-import requests
 from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
 
 from userbot import (
@@ -28,7 +27,7 @@ try:
     bot.start()
     call_py.start()
     user = bot.get_me()
-        sys.exit(1)
+    sys.exit(1)
 except Exception as e:
     LOGS.info(str(e), exc_info=True)
     sys.exit(1)
