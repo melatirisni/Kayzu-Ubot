@@ -300,6 +300,12 @@ if G_PHOTOS_AUTH_TOKEN_ID:
 GENIUS = os.environ.get(
     "GENIUS") or "vDhUmdo_ufwIvEymMeMY65IedjWaVm1KPupdx0L"
 
+# Picture For VCPLUGIN
+PLAY_PIC = (os.environ.get("PLAY_PIC")
+            or "https://telegra.ph/file/6213d2673486beca02967.png")
+QUEUE_PIC = (os.environ.get("QUEUE_PIC")
+             or "https://telegra.ph/file/d6f92c979ad96b2031cba.png")
+
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get(
     "QUOTES_API_TOKEN") or "33273f18-4a0d-4a76-8d78-a16faa002375"
