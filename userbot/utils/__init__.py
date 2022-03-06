@@ -22,6 +22,7 @@ from .progress import progress, CancelProcess
 from .tools import (
     humanbytes,
     reply_id,
+    bash,
     time_formatter,
     human_to_bytes,
     run_cmd, md5,
