@@ -18,8 +18,8 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, KAY_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot
-from userbot.events import register
+from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, KAY_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot, CMD_HANDLER as cmd
+from userbot.utils import edit_or_reply, kay_cmd
 
 
 # ================= CONSTANT =================
@@ -58,7 +58,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern=r"^\.spc")
+@kay_cmd(pattern="spc")
 async def psu(event):
     uname = platform.uname()
     softw = "**Informasi Sistem**\n"
@@ -116,7 +116,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
-@register(outgoing=True, pattern=r"^\.sysd$")
+@kay_cmd(pattern="sysd$")
 async def sysdetails(sysd):
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -136,7 +136,7 @@ async def sysdetails(sysd):
             await sysd.edit("`Install neofetch first !!`")
 
 
-@register(outgoing=True, pattern=r"^\.botver$")
+@kay_cmd(pattern="botver$")
 async def bot_ver(event):
     if event.text[0].isalpha() or event.text[0] in ("/", "#", "@", "!"):
         return
@@ -164,9 +164,9 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**♤-**🐣ҡᴧʏ-υѕєявσт🐣 Versi:** \n "
-            f"heads/Kayzu-Ubot-0-x634i7u1"
-            "\n**♤-**Revisi:**\n "
+            "**⚜-**✨Kay-Userbot✨ Versi:** \n "
+            f"heads/Kay-Userbot-0-x634i7u1"
+            "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
     else:
@@ -175,7 +175,7 @@ async def bot_ver(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.pip(?: |$)(.*)")
+@kay_cmd(pattern="pip(?: |$)(.*)")
 async def pipcheck(pip):
     if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
         return
@@ -223,7 +223,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"^\.(?:kyyalive)\s?(.)?")
+@kay_cmd(pattern="(?:kayalive)\\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -259,7 +259,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:kyyon)\s?(.)?")
+@kay_cmd(pattern="(?:kayon)\\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -292,21 +292,21 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@kay_cmd(pattern="(?:alive|on)\\s?(.)?")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("__Sedang Memuat.__")
-    await alive.edit("__Sedang Memuat..__")
-    await alive.edit("__Sedang Memuat.__")
-    await alive.edit("__Sedang Memuat..__")
-    await alive.edit("__Sedang Memuat...__")
-    await alive.edit("__Sedang Memuat..__")
-    await alive.edit("__Sedang Memuat...__")
-    await alive.edit("🔥")
+    xx = await edit_or_reply(alive, "__Sedang Memuat.__")
+    await xx.edit("__Sedang Memuat..__")
+    await xx.edit("__Sedang Memuat.__")
+    await xx.edit("__Sedang Memuat..__")
+    await xx.edit("__Sedang Memuat...__")
+    await xx.edit("__Sedang Memuat..__")
+    await xx.edit("__Sedang Memuat...__")
+    await xx.edit("🔥")
     await asyncio.sleep(2)
     output = (
-        f"┏━━━━━🐣ҡᴧʏ-υѕєявσт🐣━━━━━ \n"
+        f"┏━━━━🐣ҡᴧʏ-υѕєявσт🐣━━━━ \n"
         f"┣  `Name     :` {DEFAULTUSER} \n"
         f"┣  `Username :` @{user.username} \n"
         f"┣  `Telethon :` Ver {version.__version__} \n"
@@ -314,14 +314,14 @@ async def redis(alive):
         f"┣  `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
         f"┣  `Bot Ver  :` {BOT_VER} \n"
         f"┣  `Modules  :` {len(modules)} Modules \n"
-        f"┣  `GitHub   :` [Kayzu](https://github.com/Kayzyu/Kayzu-Ubot) \n"
+        f"┣  `GitHub   :` [Kay](https://github.com/Kayzyu/Kayzu-Ubot) \n"
         f"┣  `Support  :` [Groups](https://t.me/KayzuSupport) \n"
         f"┣  `Owner    :` [Kay](https://t.me/Kayzuuuuu) \n"
-        f"┗━━━━━━━━━━━━━━━━━━━━━━")
+        f"┗━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
-            await alive.delete()
+            await xx.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(500)
             await msg.delete()
@@ -331,14 +331,14 @@ async def redis(alive):
                 "\nPastikan Tautan Yang Anda Gunakan Valid`"
             )
             await asyncio.sleep(100)
-            await alive.delete()
+            await xx.delete()
     else:
-        await alive.edit(output)
+        await xx.edit(output)
         await asyncio.sleep(100)
-        await alive.delete()
+        await xx.delete()
 
 
-@register(outgoing=True, pattern="^.aliveu")
+@kay_cmd(pattern="aliveu")
 async def amireallyaliveuser(username):
     """ For .aliveu command, change the username in the .alive command. """
     message = username.text
@@ -351,7 +351,7 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@register(outgoing=True, pattern=r"^\.resetalive$")
+@kay_cmd(pattern="resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER  # global statement
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -360,27 +360,27 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update({
     "system":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.sysd`"
+    f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sysd`"
     "\n↳ : Shows system information using neofetch."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.db`"
+    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}db`"
     "\n↳ : Shows database related info."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.spc`"
+    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}spc`"
     "\n↳ : Show system specification."
 })
 CMD_HELP.update({
     "alive":
-    "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.alive` or `.on` or `rose`"
+    f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}alive` or `utilson`"
     "\n↳ : To see whether your bot is working or not."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.aliveu` <text>"
+    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}aliveu` <text>"
     "\n↳ : Changes the 'user' in alive to the text you want."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.restalive`"
+    f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}restalive`"
     "\n↳ : Resets the user to default."
 })
 CMD_HELP.update(
     {
         "botversion":
-        "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.botver`"
+        f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}botver`"
         "\n↳ : Shows the userbot version."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.pip` <module(s)>"
+        f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pip` <module(s)>"
         "\n↳ : Does a search of pip modules(s)."
     })
