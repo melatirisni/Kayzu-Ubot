@@ -5,31 +5,34 @@
 #
 """ Userbot start point """
 
+import sys
 from importlib import import_module
-from sys import argv
 
-from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
-from userbot import BOT_VER, LOGS, bot
+import requests
+from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
+
+from userbot import (
+    BOT_VER, 
+    LOGS,
+    bot,
+    call_py,
+)
 from userbot.modules import ALL_MODULES
 
-INVALID_PH = '\nERROR: The Phone No. entered is INVALID' \
-             '\n Tip: Use Country Code along with number.' \
-             '\n or check your phone number and try again !'
 
-try:
-    bot.start()
-except PhoneNumberInvalidError:
-    print(INVALID_PH)
-    exit(1)
+        sys.exit(1)
+except Exception as e:
+    LOGS.info(str(e), exc_info=True)
+    sys.exit(1)
 
 for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
-# bot.loop.run_until_complete(checking())
 LOGS.info(
     f"🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
-if len(argv) not in (1, 3, 4):
+
+if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.run_until_disconnected()
