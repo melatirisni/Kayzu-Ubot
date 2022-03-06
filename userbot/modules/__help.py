@@ -14,24 +14,23 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # @Qulec tarafından yazılmıştır.
-# Thanks @Spechide
+# Thanks @Spechide.
 
 from telethon.errors.rpcerrorlist import BotInlineDisabledError as noinline
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 
-from userbot import BOT_USERNAME, bot
+from userbot import BOT_USERNAME
 from userbot import CMD_HANDLER as cmd
+from userbot import bot
 from userbot.utils import edit_or_reply, kay_cmd
 
-tgbotusername = BOT_USERNAME
 
-
-@kay_cmd(pattern="helpme$")
-async def yardim(event):
+@kay_cmd(pattern="helpme")
+async def _(event):
     if event.fwd_from:
         return
-    if tgbotusername is not None:
+    if BOT_USERNAME is not None:
         chat = "@Botfather"
         try:
             results = await event.client.inline_query(BOT_USERNAME, "@KayUserbot")
@@ -71,5 +70,6 @@ async def yardim(event):
             )
     else:
         await edit_or_reply(
+            event,
             "**Silahkan Buat BOT di @BotFather dan Tambahkan Var** `BOT_TOKEN` & `BOT_USERNAME`",
         )
