@@ -508,7 +508,6 @@ def paginate_help(page_number, loaded_modules, prefix):
                                     prefix, modulo_page)), )]
     return pairs
 
-
     dugmeler = CMD_HELP
     me = bot.get_me()
      uid = me.id
