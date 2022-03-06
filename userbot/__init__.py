@@ -524,16 +524,16 @@ except Exception as e:
     print(f"STRING_SESSION - {e}")
     sys.exit()
 
-        dugmeler = CMD_HELP
-        me = bot.get_me()
-        uid = me.id
+    dugmeler = CMD_HELP
+    me = bot.get_me()
+     uid = me.id
 
-        @tgbot.on(
-            events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+      @tgbot.on(
+           events.callbackquery.CallbackQuery(  # pylint:disable=E0602
                 data=re.compile("open")
             )
-        )
-        async def opeen(event):
+           )
+       async def opeen(event):
             try:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
