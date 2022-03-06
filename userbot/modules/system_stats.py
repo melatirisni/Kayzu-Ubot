@@ -164,7 +164,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**♤-**🔥ҡᴀʏᴢᴜ-ᴜвσт🔥 Versi:** \n "
+            "**♤-**🐣ҡᴧʏ-υѕєявσт🐣 Versi:** \n "
             f"heads/Kayzu-Ubot-0-x634i7u1"
             "\n**♤-**Revisi:**\n "
             f"{revout}"
@@ -228,7 +228,7 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **🔥ҡᴀʏᴢᴜ-ᴜвσт🔥** \n\n"
+        f" **🐣ҡᴧʏ-υѕєявσт🐣** \n\n"
         f"\n__**{KAY_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"◙ `Name       :` {DEFAULTUSER} \n"
@@ -306,7 +306,7 @@ async def redis(alive):
     await alive.edit("🔥")
     await asyncio.sleep(2)
     output = (
-        f"┏━━━━🔥ҡᴀʏᴢᴜ-ᴜвσт🔥━━━━ \n"
+        f"┏━━━━━🐣ҡᴧʏ-υѕєявσт🐣━━━━━ \n"
         f"┣  `Name     :` {DEFAULTUSER} \n"
         f"┣  `Username :` @{user.username} \n"
         f"┣  `Telethon :` Ver {version.__version__} \n"
@@ -317,7 +317,7 @@ async def redis(alive):
         f"┣  `GitHub   :` [Kayzu](https://github.com/Kayzyu/Kayzu-Ubot) \n"
         f"┣  `Support  :` [Groups](https://t.me/KayzuSupport) \n"
         f"┣  `Owner    :` [Kay](https://t.me/Kayzuuuuu) \n"
-        f"┗━━━━━━━━━━━━━━━━━━━")
+        f"┗━━━━━━━━━━━━━━━━━━━━━━")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
