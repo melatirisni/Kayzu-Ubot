@@ -410,113 +410,102 @@ with bot:
         quit(1)
 
 
-async def check_botlog_chatid():
-    if not BOTLOG_CHATID and LOGSPAMMER:
-        LOGS.info(
-            "You must set up the BOTLOG_CHATID variable in the config.env or environment variables, for the private error log storage to work."
-        )
-        quit(1)
+try:
+    from userbot.modules.sql_helper.globals import delgvar, gvarstatus
 
-    elif not BOTLOG_CHATID and BOTLOG:
-        LOGS.info(
-            "You must set up the BOTLOG_CHATID variable in the config.env or environment variables, for the userbot logging feature to work."
-        )
-        quit(1)
-
-    elif not BOTLOG or not LOGSPAMMER:
-        return
-
-    entity = await bot.get_entity(BOTLOG_CHATID)
-    if entity.default_banned_rights.send_messages:
-        LOGS.info(
-            "Your account doesn't have rights to send messages to BOTLOG_CHATID "
-            "group. Check if you typed the Chat ID correctly.")
-        quit(1)
+    chat_id, msg_id = gvarstatus("restartstatus").split("\n")
+    with bot:
+        try:
+            bot.loop.run_until_complete(
+                update_restart_msg(
+                    int(chat_id), int(msg_id)))
+        except BaseException:
+            pass
+    delgvar("restartstatus")
+except AttributeError:
+    pass
 
 
-with bot:
-    try:
-        bot.loop.run_until_complete(check_botlog_chatid())
-    except BaseException:
-        LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file.")
-        quit(1)
-
-
-async def check_alive():
-    await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"\nҡᴀʏᴢᴜ - ᴜвσт Bᴇʀʜᴀsɪʟ Dɪᴀᴋᴛɪғᴋᴀɴ\nᴥ ** Bσт Oғ: ** {ALIVE_NAME}\nᴥ ** Bσт Vᴇʀ: ** 7.0\n━ ━ ━ ━ ━ ━ ━ ━ ━ ━\nᴥ ** Sᴜᴘᴘᴏʀᴛ​: ** @KayzuSupport\nᴥ ** Cʜᴀɴɴᴇʟ​: ** @kayzuchannel\n")
-    return
-
-with bot:
-    try:
-        bot.loop.run_until_complete(check_alive())
-    except BaseException:
-        LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file.")
-        quit(1)
-
-
-# Global Variables
-COUNT_MSG = 0
-USERS = {}
-COUNT_PM = {}
-ENABLE_KILLME = True
-LASTMSG = {}
-CMD_HELP = {}
-ISAFK = False
-AFKREASON = None
-ZALG_LIST = {}
-
-
-# ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
+if BOT_TOKEN is not None:
+    tgbot = TelegramClient(
+        "TG_BOT_TOKEN",
+        api_id=API_KEY,
+        api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    ).start(bot_token=BOT_TOKEN)
+else:
+    tgbot = None
 
 
 def paginate_help(page_number, loaded_modules, prefix):
-    number_of_rows = 5
+    number_of_rows = 6
     number_of_cols = 2
-    global lockpage
-    lockpage = page_number
+    global looters
+    looters = page_number
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
         custom.Button.inline(
-            "{} {} {} ".format(
-                f"{EMOJI_HELP}",
-                x,
-                f"{EMOJI_HELP}"),
-            data="ub_modul_{}".format(x)) for x in helpable_modules]
-    pairs = list(zip(modules[:: number_of_cols],
-                     modules[1::number_of_cols]))
+            "{} {} {}".format(f"{EMOJI_HELP}", x, f"{EMOJI_HELP}"),
+            data="ub_modul_{}".format(x),
+        )
+        for x in helpable_modules
+    ]
+    pairs = list(
+        zip(
+            modules[::number_of_cols],
+            modules[1::number_of_cols],
+        )
+    )
     if len(modules) % number_of_cols == 1:
         pairs.append((modules[-1],))
     max_num_pages = ceil(len(pairs) / number_of_rows)
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
         pairs = pairs[
-            modulo_page * number_of_rows: number_of_rows * (
-                modulo_page + 1)] + [
-            (custom.Button.inline(
-                "<<ᴘʀᴇᴠɪᴏᴜꜱ", data="{}_prev({})".format(
-                    prefix, modulo_page)), custom.Button.inline(
-                        "ᴍᴇɴᴜ", data="{}_close({})".format(
-                            prefix, modulo_page)), custom.Button.inline(
-                                "ɴᴇxᴛ>>", data="{}_next({})".format(
-                                    prefix, modulo_page)), )]
+            modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
+        ] + [
+            (
+                custom.Button.inline(
+                    "««", data="{}_prev({})".format(prefix, modulo_page)
+                ),
+                custom.Button.inline("Tutup", b"close"),
+                custom.Button.inline(
+                    "»»", data="{}_next({})".format(prefix, modulo_page)
+                ),
+            )
+        ]
     return pairs
 
-    dugmeler = CMD_HELP
-    me = bot.get_me()
-     uid = me.id
 
-      @tgbot.on(
-           events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile("open")
-            )
-           )
+def ibuild_keyboard(buttons):
+    keyb = []
+    for btn in buttons:
+        if btn[2] and keyb:
+            keyb[-1].append(Button.url(btn[0], btn[1]))
+        else:
+            keyb.append([Button.url(btn[0], btn[1])])
+    return keyb
+
+
+with bot:
+    try:
+        from userbot.modules.sql_helper.bot_blacklists import check_is_black_list
+        from userbot.modules.sql_helper.bot_pms_sql import add_user_to_db, get_user_id
+        from userbot.utils import reply_id
+
+        dugmeler = CMD_HELP
+        user = bot.get_me()
+        uid = user.id
+        owner = user.first_name
+        logo = ALIVE_LOGO
+        roselogo = INLINE_PIC
+        tgbotusername = BOT_USERNAME
+        BTN_URL_REGEX = re.compile(
+            r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
+        )
        async def opeen(event):
             try:
                 tgbotusername = BOT_USERNAME
