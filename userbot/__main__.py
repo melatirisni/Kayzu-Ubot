@@ -19,6 +19,11 @@ from userbot import (
 )
 from userbot.modules import ALL_MODULES
 
+
+try:
+    bot.start()
+    call_py.start()
+    user = bot.get_me()
 sys.exit(1)
 except Exception as e:
     LOGS.info(str(e), exc_info=True)
