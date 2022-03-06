@@ -51,8 +51,9 @@ opencv-python
 oauth2client
 patool
 pendulum
-Pillow>=6.0.0
+pillow
 psutil
+py-tgcalls
 psycopg2
 psycopg2-binary
 pybase64
@@ -61,7 +62,6 @@ pydub
 pySmartDL
 python-barcode
 python-dotenv
-py-tgcalls
 pytz
 pyaztro
 pytube>=9.5.1
@@ -98,6 +98,7 @@ wget
 wikipedia>=1.4.0
 wand
 wordcloud
+youtube-search-python
 youtube-dl
 youtube_dl
 youtube_search
