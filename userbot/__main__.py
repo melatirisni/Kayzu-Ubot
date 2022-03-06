@@ -38,13 +38,13 @@ for module_name in ALL_MODULES:
 LOGS.info(
     f"Jika {ALIVE_NAME} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/KayzuSupport")
 LOGS.info(
-    f"✨Kayzu-Ubot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
+    f"✨Kay-Userbot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
 
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, "✨ **Kayzu Ubot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.0@Kayzu-Ubot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @kayzuchannel")
+            await bot.send_message(BOTLOG_CHATID, "✨ **Kay Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.0@Kay-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @kayzuchannel")
     except Exception as e:
         LOGS.info(str(e))
     try:
