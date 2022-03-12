@@ -9,6 +9,7 @@ import random
 import pybase64
 import sys
 
+from base64 import b64decode
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
