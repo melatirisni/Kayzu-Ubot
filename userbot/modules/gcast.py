@@ -20,6 +20,8 @@ GCAST_BLACKLIST = [
     -1001788983303,  # KaySupport
     -1001380293847,  # NastySupport
     -1001386557465,  # RumahKitaro
+    -1001318051930,  # mobile_legends_unofficial
+    -1001572486389,  # themusicLD
 ]
 
 
