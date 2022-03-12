@@ -9,7 +9,6 @@ import random
 import pybase64
 import sys
 
-from base64 import b64decode
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
@@ -413,16 +412,19 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = str(pybase64.b64decode("QG11dHVhbGFuYmluYXRhbmc="))[2:14]
-    checker = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:16]
+    gocheck = pybase64.b64decode("QG11dHVhbGFuYmluYXRhbmc=")
+    checker = pybase64.b64decode("QGtheXp1Y2hhbm5lbA==")
+    Input_gocheck = gocheck.decode('utf-8')
+    Input_checker = checker.decode('utf-8')
     try:
-        await bot(GetSec(gocheck))
+        await bot(GetSec(f"{Input_gocheck}"))
     except BaseException:
         pass
     try:
-        await bot(GetSec(checker))
+        await bot(GetSec(f"{Input_checker}"))
     except BaseException:
         pass
+
 
 with bot:
     try:
