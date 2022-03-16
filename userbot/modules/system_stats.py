@@ -9,7 +9,7 @@
 import asyncio
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
-from platform import python_version, uname
+from platform import python_version
 from shutil import which
 from os import remove
 from telethon import __version__, version
@@ -18,13 +18,8 @@ import sys
 import time
 from datetime import datetime
 import psutil
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER, CMD_HELP, KAY_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot, CMD_HANDLER as cmd
+from userbot import ALIVE_LOGO, BOT_VER, CMD_HELP, KAY_TEKS_KUSTOM, StartTime, UPSTREAM_REPO_BRANCH, bot, CMD_HANDLER as cmd
 from userbot.utils import edit_or_reply, kay_cmd
-
-
-# ================= CONSTANT =================
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
 
 
 modules = CMD_HELP
@@ -228,10 +223,10 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f" **🐣ҡᴧʏ-υѕєявσт🐣** \n\n"
+        f" **✨ҡᴧʏ-υѕєявσт✨** \n\n"
         f"\n__**{KAY_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
-        f"◙ `Name       :` {DEFAULTUSER} \n"
+        f"◙ `Name       :` [{user.first_name}](tg://user?id={user.id}) \n"
         f"◙ `Username   :` @{user.username} \n"
         f"◙ `Telethon   :` {version.__version__} \n"
         f"◙ `Python     :` {python_version()} \n"
@@ -265,7 +260,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ    :`[Kay](t.me/Kayzuuuuu) \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ    :`[ҡᴧʏ](t.me/Kayzuuuuu) \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ   :`Ubuntu 20.10 \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__} \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ   :`v.{python_version()} \n"
@@ -303,21 +298,17 @@ async def redis(alive):
     await xx.edit("__Sedang Memuat...__")
     await xx.edit("__Sedang Memuat..__")
     await xx.edit("__Sedang Memuat...__")
-    await xx.edit("🔥")
+    await xx.edit("⚡")
     await asyncio.sleep(2)
     output = (
-        f"┏━━━━🐣ҡᴧʏ-υѕєявσт🐣━━━━ \n"
-        f"┣  `Name     :` {DEFAULTUSER} \n"
-        f"┣  `Username :` @{user.username} \n"
-        f"┣  `Telethon :` Ver {version.__version__} \n"
-        f"┣  `Python   :` Ver {python_version()} \n"
-        f"┣  `Branch   :` {UPSTREAM_REPO_BRANCH} \n"
-        f"┣  `Bot Ver  :` {BOT_VER} \n"
-        f"┣  `Modules  :` {len(modules)} Modules \n"
-        f"┣  `GitHub   :` [Kay](https://github.com/Kayzyu/Kayzu-Ubot) \n"
-        f"┣  `Support  :` [Groups](https://t.me/KayzuSupport) \n"
-        f"┣  `Owner    :` [Kay](https://t.me/Kayzuuuuu) \n"
-        f"┗━━━━━━━━━━━━━━━━━━━━━")
+        f"•  **Name :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"•  **Username :** @{user.username} \n"
+        f"•  **Telethon :** Ver {version.__version__} \n"
+        f"•  **Python :** Ver {python_version()} \n"
+        f"•  **Branch :** {UPSTREAM_REPO_BRANCH} \n"
+        f"•  **Bot Ver :** {BOT_VER} \n"
+        f"•  **Modules :** {len(modules)} Modules \n"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/KayzuSupport) | [ᴄʜᴀɴɴᴇʟ](https://t.me/kayzuchannel) | [ᴏᴡɴᴇʀ](https://t.me/Kayzuuuuu) | [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
@@ -336,26 +327,6 @@ async def redis(alive):
         await xx.edit(output)
         await asyncio.sleep(100)
         await xx.delete()
-
-
-@kay_cmd(pattern="aliveu")
-async def amireallyaliveuser(username):
-    """ For .aliveu command, change the username in the .alive command. """
-    message = username.text
-    output = ".aliveu [new username] tidak boleh kosong"
-    if not (message == ".aliveu" and message[7:8] != " "):
-        newuser = message[8:]
-        global DEFAULTUSER  # global statement
-        DEFAULTUSER = username
-        output = "Successfully changed user to " + newuser + "!"
-    await username.edit("`" f"{output}" "`")
-
-
-@kay_cmd(pattern="resetalive$")
-async def amireallyalivereset(ureset):
-    global DEFAULTUSER  # global statement
-    DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-    await ureset.edit("`" "Successfully reset user for alive!" "`")
 
 
 CMD_HELP.update({
