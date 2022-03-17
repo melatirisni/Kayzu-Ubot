@@ -1,5 +1,5 @@
 # Thanks Full To Team Ultroid
-# Fiks By Kay @Kayzuuuuu
+# Fiks By Kyy @IDnyaKosong
 
 
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
@@ -8,8 +8,13 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
+from telethon.tl import types
+from telethon.utils import get_display_name
+
+from userbot import owner
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.utils import edit_delete, edit_or_reply, kay_cmd
+from userbot.events import register
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
@@ -21,9 +26,9 @@ def vcmention(user):
     return f"[{full_name}](tg://user?id={user.id})"
 
 
-async def get_call(c):
-    await c.client(getchat(c.chat_id))
-    hehe = await c.client(getvc(c.full_chat.call, limit=1))
+async def get_call(kay):
+    kay = await kay.client(getchat(kay.chat_id))
+    await kyy.client(getvc(kay.full_chat.call, limit=1))
     return hehe.call
 
 
@@ -33,55 +38,77 @@ def user_list(l, n):
 
 
 @kay_cmd(pattern="startvc$")
+@register(pattern=r"^\.startvcs$", sudo=True)
 async def start_voice(c):
-    me = await c.client.get_me()
     chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {owner} Bukan Admin 👮**")
         return
     try:
         await c.client(startvc(c.chat_id))
-        await edit_or_reply(c, "`Voice Chat Started...`")
+        await edit_or_reply(c, "`Memulai Obrolan Suara`")
     except Exception as ex:
-        await edit_delete(f"**ERROR:** `{ex}`")
+        await edit_or_reply(c, f"**ERROR:** `{ex}`")
 
 
 @kay_cmd(pattern="stopvc$")
+@register(pattern=r"^\.stopvcs$", sudo=True)
 async def stop_voice(c):
-    me = await c.client.get_me()
     chat = await c.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await edit_delete(c, f"**Maaf {me.first_name} Bukan Admin 👮**")
+        await edit_delete(c, f"**Maaf {owner} Bukan Admin 👮**")
         return
     try:
         await c.client(stopvc(await get_call(c)))
-        await edit_or_reply(c, "`Voice Chat Stopped...`")
+        await edit_or_reply(c, "`Mematikan Obrolan Suara`")
     except Exception as ex:
         await edit_delete(c, f"**ERROR:** `{ex}`")
 
 
 @kay_cmd(pattern="vcinvite")
-async def _(c):
-    xxnx = await edit_or_reply(c, "`Inviting Members to Voice Chat...`")
+async def _(kay):
+    await edit_or_reply(kay, "`Sedang Menginvite Member...`")
     users = []
     z = 0
-    async for x in c.client.iter_participants(c.chat_id):
+    async for x in kay.client.iter_participants(kay.chat_id):
         if not x.bot:
             users.append(x.id)
-    botman = list(user_list(users, 6))
-    for p in botman:
+    hmm = list(user_list(users, 6))
+    for p in hmm:
         try:
-            await c.client(invitetovc(call=await get_call(c), users=p))
+            await kay.client(invitetovc(call=await get_call(kay), users=p))
             z += 6
         except BaseException:
             pass
-    await xxnx.edit(f"`{z}` **Orang Berhasil diundang ke VCG**")
+    await edit_or_reply(kay, f"`Menginvite {z} Member`")
+
+
+@kay_cmd(pattern="vctitle(?: |$)(.*)")
+@register(pattern=r"^\.cvctitle$", sudo=True)
+async def change_title(e):
+    title = e.pattern_match.group(1)
+    me = await e.client.get_me()
+    chat = await e.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+
+    if not title:
+        return await edit_delete(e, "**Silahkan Masukan Title Obrolan Suara Grup**")
+
+    if not admin and not creator:
+        await edit_delete(e, f"**Maaf {me.first_name} Bukan Admin 👮**")
+        return
+    try:
+        await e.client(settitle(call=await get_call(e), title=title.strip()))
+        await edit_or_reply(e, f"**Berhasil Mengubah Judul VCG Menjadi** `{title}`")
+    except Exception as ex:
+        await edit_delete(e, f"**ERROR:** `{ex}`")
 
 
 CMD_HELP.update(
@@ -90,6 +117,8 @@ CMD_HELP.update(
          \n↳ : Memulai Obrolan Suara dalam Group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
          \n↳ : `Menghentikan Obrolan Suara Pada Group.`\
+         \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vctittle <tittle vcg>`\
+         \n↳ : `Mengubah tittle/judul Obrolan Suara.`\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vcinvite`\
          \n↳ : Invite semua member yang berada di group."
     }
