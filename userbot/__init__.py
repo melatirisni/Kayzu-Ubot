@@ -34,6 +34,12 @@ from telethon import Button, events, functions, types
 from telethon.tl.types import InputWebDocument
 from telethon.utils import get_display_name
 
+from .storage import Storage
+
+
+def STORAGE(n):
+    return Storage(Path("data") / n)
+
 
 redis_db = None
 
@@ -109,6 +115,21 @@ DEVS = (
     1607338903,
 )
 
+
+# Blacklist User for use Kay-Userbot
+while 0 < 6:
+    _BLACKLIST = get(
+        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
+    )
+    if _BLACKLIST.status_code != 200:
+        if 0 != 5:
+            continue
+        kyyblacklist = []
+        break
+    kyyblacklist = _BLACKLIST.json()
+    break
+
+del _BLACKLIST
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
@@ -235,13 +256,13 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kayalive
-KAY_TEKS_KUSTOM = os.environ.get("KAY_TEKS_KUSTOM", "I'am Using ҡᴧʏ-υѕєявσт🐣")
+KAY_TEKS_KUSTOM = os.environ.get("KAY_TEKS_KUSTOM", "I'am Using Kay-Userbot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Kay")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -278,7 +299,7 @@ INLINE_PIC = os.environ.get(
     "INLINE_PIC") or "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "🐣"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
 
 # °Kay-Userbot°
 OWNER_URL = os.environ.get("OWNER_URL") or "https://t.me/Kayzuuuuu"
@@ -413,26 +434,28 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = pybase64.b64decode("QG11dHVhbGFuYmluYXRhbmc=")
-    checker = pybase64.b64decode("QGtheXp1Y2hhbm5lbA==")
-    Input_gocheck = gocheck.decode('utf-8')
-    Input_checker = checker.decode('utf-8')
+    gocheck = str(pybase64.b64decode("QEtheXp1U3VwcG9ydA=="))[2:15]
+    checker = str(pybase64.b64decode("QGRwcnNuZGlhcnk="))[2:16]
+    checker2 = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:16]
     try:
-        await bot(GetSec(f"{Input_gocheck}"))
+        await bot(GetSec(gocheck))
     except BaseException:
         pass
     try:
-        await bot(GetSec(f"{Input_checker}"))
+        await bot(GetSec(checker))
     except BaseException:
         pass
-
+    try:
+        await bot(GetSec(checker2))
+    except BaseException:
+        pass
 
 with bot:
     try:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Join Support Group @mutualanbinatang and Channel @kayzuchanel to see the updates of userbot"
+            "Join Support Group @KayzuSupport and Channel @kayzuchannel to see the updates of userbot"
             "Don't Leave")
         quit(1)
 
@@ -472,12 +495,11 @@ with bot:
 
 
 async def update_restart_msg(chat_id, msg_id):
-    DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
         f"**Kay-Userbot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
-        f"**User:** {DEFAULTUSER}"
+        f"**User:** {owner}"
     )
     await bot.edit_message(chat_id, msg_id, message)
     return True
@@ -574,7 +596,7 @@ with bot:
         uid = user.id
         owner = user.first_name
         logo = ALIVE_LOGO
-        roselogo = INLINE_PIC
+        kyylogo = INLINE_PIC
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
             r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
@@ -583,13 +605,13 @@ with bot:
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(rb"reopen")))
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
-                current_page_number = int(lockpage)
+                current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**🐣ҡᴧʏ-υѕєявσт🐣 Inline Menu ✨**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules"
+                text = f"**✨ ҡᴧʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
-                    file=roselogo,
+                    file=kyylogo,
                     buttons=buttons,
                     link_preview=False,
                 )
@@ -676,22 +698,22 @@ with bot:
             if event.query.user_id == uid and query.startswith("@KayUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.photo(
-                    file=roselogo,
+                    file=kyylogo,
                     link_preview=False,
-                    text=f"**🐣ҡᴧʏ-υѕєявσт🐣 Inline Menu ✨**\n\n✣ **Owner** [{user.first_name}](tg://user?id={user.id})\n✣ **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
                     description="Repository Kay - Userbot",
-                    url="https://t.me/KayzuSupport",
+                    url="https://t.me/NastySupportt",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**🐣ҡᴧʏ-υѕєявσт🐣**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner Repo :** [Kay-Ex](https://t.me/Kayzuuuuu)\n✣ **Support :** @KayzuSupport\n✣ **Repository :** [ҡᴧʏ-υѕєявσт](https://github.com/Kayzyu/Kayzu-Ubot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Kay-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Kay-Ex](https://t.me/Kayzuuuuu)\n✣ **sᴜᴘᴘᴏʀᴛ :** @KayzuSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Kay-Userbot](https://github.com/Kayzyu/Kayzu-Ubot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -738,15 +760,15 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="🐣 ҡᴧʏ-υѕєявσт 🐣",
+                    title="✨ ҡᴧʏ-υѕєявσт ✨",
                     description="Kay - Userbot | Telethon",
-                    url="https://t.me/kayzuchannel",
+                    url="https://t.me/NastyProject",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**🐣ҡᴧʏ-υѕєявσт🐣**\n➖➖➖➖➖➖➖➖➖➖\n✣ **Owner:** [{user.first_name}](tg://user?id={user.id})\n✣ **Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Updates:** @kayzuchannel\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Kay-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @kayzuchannel\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
@@ -777,7 +799,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"Kamu Tidak diizinkan, ini Userbot Milik {ALIVE_NAME}"
+                    f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -787,7 +809,7 @@ with bot:
                 openlagi = custom.Button.inline(
                     "• Re-Open Menu •", data="reopen")
                 await event.edit(
-                    "⚜️ **Help Mode Button Ditutup!** ⚜️", buttons=openlagi
+                    "⚜️ **ʜᴇʟᴘ ᴍᴏᴅᴇ ʙᴜᴛᴛᴏɴ ᴅɪᴛᴜᴛᴜᴘ!** ⚜️", buttons=openlagi
                 )
             else:
                 reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
@@ -832,21 +854,21 @@ with bot:
                 reply_pop_up_alert = (
                     help_string
                     if help_string is not None
-                    else "{} No document has been written for module.".format(
+                    else "{} Tidak ada dokumen yang telah ditulis untuk modul.".format(
                         modul_name
                     )
                 )
             else:
-                f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER} Nanti Kena Ghosting."
+                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
         LOGS.info(
-            "Mode Inline Bot Mu Nonaktif. "
-            "Untuk Mengaktifkannya, Silahkan Pergi Ke @BotFather Lalu, Settings Bot > Pilih Mode Inline > Turn On. ")
+            "Help Mode Inline Bot Mu Tidak aktif. Tidak di aktifkan juga tidak apa-apa. "
+            "Untuk Mengaktifkannya Buat bot di @BotFather Lalu Tambahkan var BOT_TOKEN dan BOT_USERNAME. "
+            "Pergi Ke @BotFather lalu settings bot » Pilih mode inline » Turn On. ")
     try:
         bot.loop.run_until_complete(check_botlog_chatid())
-    except BaseException:
-        LOGS.info(
-            "BOTLOG_CHATID Environment Variable Isn't a "
-            "Valid Entity. Please Check Your Environment variables/config.env File.")
-        quit(1)
+    except BaseException as e:
+        LOGS.exception(f"[BOTLOG] - {e}")
+        sys.exit(1)
