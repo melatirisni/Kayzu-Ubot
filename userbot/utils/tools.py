@@ -171,6 +171,9 @@ async def run_cmd(cmd: list) -> tuple[bytes, bytes]:
     return t_resp, e_resp
 
 
+# https://github.com/TeamUltroid/pyUltroid/blob/31c271cf4d35ab700e5880e952e54c82046812c2/pyUltroid/functions/helper.py#L154
+
+
 async def bash(cmd):
     process = await asyncio.create_subprocess_shell(
         cmd,
@@ -185,7 +188,7 @@ async def bash(cmd):
 
 def post_to_telegraph(title, html_format_content):
     post_client = TelegraphPoster(use_api=True)
-    auth_name = "Kayzu-Ubot"
+    auth_name = "Kay-Userbot"
     auth_url = "https://github.com/Kayzyu/Kayzu-Ubot"
     post_client.create_api_token(auth_name)
     post_page = post_client.post(
