@@ -4,7 +4,7 @@ Available Commands:
 .gban REASON
 .ungban REASON"""
 import asyncio
-from userbot import CMD_HELP, owner, CMD_HANDLER as cmd
+from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.utils import kay_cmd
 from userbot import BOTLOG_CHATID, bot
 # imported from uniborg by @heyworld
