@@ -8,6 +8,7 @@
 import sys
 from importlib import import_module
 
+import requests
 from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
 
 from userbot import (
@@ -16,7 +17,7 @@ from userbot import (
     BOT_TOKEN,
     BOT_VER,
     LOGS,
-    ALIVE_NAME,
+    kyyblacklist,
     bot,
     call_py,
 )
@@ -27,7 +28,14 @@ try:
     bot.start()
     call_py.start()
     user = bot.get_me()
-
+    kyyblacklist = requests.get(
+        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
+    ).json()
+    if user.id in kyyblacklist:
+        LOGS.warning(
+            "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @IDnyaKosong"
+        )
+        sys.exit(1)
 except Exception as e:
     LOGS.info(str(e), exc_info=True)
     sys.exit(1)
@@ -36,7 +44,7 @@ for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
 LOGS.info(
-    f"Jika {ALIVE_NAME} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/KayzuSupport")
+    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/NastySupportt")
 LOGS.info(
     f"✨Kay-Userbot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
@@ -44,7 +52,7 @@ LOGS.info(
 async def check_alive():
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_message(BOTLOG_CHATID, "✨ **Kay Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.0@Kay-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @kayzuchannel")
+            await bot.send_message(BOTLOG_CHATID, "✨ **Kay Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - 3.1.0@Kay-Userbot\n➠ **Ketik** `.ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @kayzuchannel ")
     except Exception as e:
         LOGS.info(str(e))
     try:
