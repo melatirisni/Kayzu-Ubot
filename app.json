@@ -1,5 +1,5 @@
 {
-  "name": "Kayzu-Ubot",
+  "name": "Kay-Userbot",
   "description": "USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
   "logo": "https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg",
   "keywords": [
@@ -22,12 +22,8 @@
       "description": "Dapatkan Api Hash Di Web my.telegram.org",
       "required": true
     },
-    "ALIVE_NAME": {
-      "description": "Nama anda untuk menunjukan pesan .alive",
-      "required": true
-    },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @Kayzuuuuu di telegram",
+      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @IDnyaKosong di telegram",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -36,19 +32,16 @@
     },
     "HEROKU_API_KEY": {
       "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
-      "value": "Check Di Heroku Lalu Pengaturan Akun",
+      "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
     "BOTLOG_CHATID": {
       "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
       "required": true
     },
-    "BOT_TOKEN": {
-      "description": "Set this to enable inline bot helper. get the token from @BotFather",
-      "required": true
-    },
-    "BOT_USERNAME": {
-      "description": "Username Bot Kamu Di @BotFather, Tanpa @",
+    "PM_AUTO_BAN": {
+      "description": "Pengalihan Fitur Larangan Otomatis PM. atau /skip",
+      "value": "False",
       "required": true
     }
   },
