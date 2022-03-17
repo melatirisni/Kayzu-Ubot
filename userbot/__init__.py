@@ -596,7 +596,7 @@ with bot:
         uid = user.id
         owner = user.first_name
         logo = ALIVE_LOGO
-        kyylogo = INLINE_PIC
+        kyylogo = ALIVE_LOGO
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
             r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)"
@@ -709,7 +709,7 @@ with bot:
                     description="Repository Kay - Userbot",
                     url="https://t.me/NastySupportt",
                     thumb=InputWebDocument(
-                        INLINE_PIC,
+                        ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
@@ -762,9 +762,9 @@ with bot:
                 result = builder.article(
                     title="✨ ҡᴧʏ-υѕєявσт ✨",
                     description="Kay - Userbot | Telethon",
-                    url="https://t.me/NastyProject",
+                    url="https://t.me/kayzuchannel",
                     thumb=InputWebDocument(
-                        INLINE_PIC,
+                        ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
