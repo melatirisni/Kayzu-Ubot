@@ -227,7 +227,7 @@ async def amireallyalive(alive):
         f"\n__**{KAY_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"◙ `Name       :` [{user.first_name}](tg://user?id={user.id}) \n"
-        f"◙ `Username   :` @{user.username} \n"
+        f"◙ `Username   :` {user.username} \n"
         f"◙ `Telethon   :` {version.__version__} \n"
         f"◙ `Python     :` {python_version()} \n"
         f"◙ `Bot Ver    :` {BOT_VER} \n"
@@ -302,13 +302,13 @@ async def redis(alive):
     await asyncio.sleep(2)
     output = (
         f"•  **Name :** [{user.first_name}](tg://user?id={user.id}) \n"
-        f"•  **Username :** @{user.username} \n"
+        f"•  **Username :** {user.username} \n"
         f"•  **Telethon :** Ver {version.__version__} \n"
         f"•  **Python :** Ver {python_version()} \n"
         f"•  **Branch :** {UPSTREAM_REPO_BRANCH} \n"
         f"•  **Bot Ver :** {BOT_VER} \n"
         f"•  **Modules :** {len(modules)} Modules \n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/KayzuSupport) | [ᴄʜᴀɴɴᴇʟ](https://t.me/kayzuchannel) | [ᴏᴡɴᴇʀ](https://t.me/Kayzuuuuu) | [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)")
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/KayzuSupport) | [ᴄʜᴀɴɴᴇʟ](https://t.me/kayzuchannel) | [ɢɪᴛʜᴜʙ](https://github.com/Kayzyu/Kayzu-Ubot)")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
