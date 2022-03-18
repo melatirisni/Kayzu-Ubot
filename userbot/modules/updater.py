@@ -19,6 +19,7 @@ from userbot import (
     UPSTREAM_REPO_URL,
     UPSTREAM_REPO_BRANCH
 )
+from userbot.events import register
 from userbot.utils import edit_or_reply, edit_delete, kay_cmd
 
 requirements_path = path.join(
