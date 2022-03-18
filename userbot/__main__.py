@@ -33,7 +33,7 @@ try:
     ).json()
     if user.id in kyyblacklist:
         LOGS.warning(
-            "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @IDnyaKosong"
+            "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @Kayzuuuuu"
         )
         sys.exit(1)
 except Exception as e:
@@ -44,7 +44,7 @@ for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
 LOGS.info(
-    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/NastySupportt")
+    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Grup https://t.me/KayzuSupport")
 LOGS.info(
     f"✨Kay-Userbot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
 
