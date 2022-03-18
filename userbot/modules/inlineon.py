@@ -7,10 +7,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import bot, BOT_USERNAME
-from userbot.events import register
+from userbot.utils import kay_cmd
 
 
-@register(outgoing=True, pattern=r"^\.inlineon(?: |$)(.*)")
+@kay_cmd(pattern="inlineon(?: |$)(.*)")
 async def _(event):
     await event.edit(f"Sedang menyalakan inline untuk `@{BOT_USERNAME}` tunggu sebentar")
     async with bot.conversation("@BotFather") as conv:
@@ -20,7 +20,7 @@ async def _(event):
             )
             await conv.send_message("/setinline")
             await conv.get_response()
-            await conv.send_message(f"@{BOT_USERNAME}")
+            await conv.send_message(f"{BOT_USERNAME}")
             await conv.get_response()
             await conv.send_message("Search")
             await conv.get_response()
@@ -28,4 +28,4 @@ async def _(event):
         except YouBlockedUserError:
             await event.edit("Harap unblock `@BotFather` dan coba lagi")
             return
-            await event.edit(f"**Berhasil Menyalakan Mode Inline untuk `@{BOT_USERNAME}`**\n\n**Ketik** `.helpme` **lagi untuk membuka menu bantuan.**")
+            await event.edit(f"**Berhasil Menyalakan Mode Inline untuk `{BOT_USERNAME}`**\n\n**Ketik** `.helpme` **lagi untuk membuka menu bantuan.**")
