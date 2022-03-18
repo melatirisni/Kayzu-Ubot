@@ -1,5 +1,5 @@
-<h2 align="center">🐣ҡᴧʏ-υѕєявσт🐣
-</h2>
+<h1 align="center">ҡᴧʏ-υѕєявσт
+</h1>
 
 <p align="center">
   <img src="https://telegra.ph/file/d257ba98dbd40a7f6fa04.jpg">
