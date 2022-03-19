@@ -27,7 +27,7 @@ DEFAULTUSER = user.first_name
 CUSTOM_HELP_EMOJI = "✨"
 
 
-@kay_cmd(pattern="helpme?(.*)")
+@kay_cmd(pattern="helpme ?(.*)")
 async def cmd_list(event):
     args = event.pattern_match.group(1).lower()
     if args:
