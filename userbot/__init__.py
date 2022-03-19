@@ -707,7 +707,7 @@ with bot:
                 result = builder.article(
                     title="Repository",
                     description="Repository Kay - Userbot",
-                    url="https://t.me/NastySupportt",
+                    url="https://t.me/KayzuSupport",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
