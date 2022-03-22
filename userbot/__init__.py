@@ -436,7 +436,7 @@ except Exception as e:
 
 async def checking():
     gocheck = pybase64.b64decode("QEtheXp1U3VwcG9ydA==")
-    checker = pybase64.b64decode("QGRwcnNuZGlhcnk=")
+    checker = pybase64.b64decode("QGtheXp1Y2hhbm5lbA==")
     try:
         await bot(GetSec(gocheck))
     except BaseException:
