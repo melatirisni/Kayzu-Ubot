@@ -22,6 +22,8 @@ GCAST_BLACKLIST = [
     -1001386557465,  # RumahKitaro
     -1001318051930,  # mobile_legends_unofficial
     -1001572486389,  # themusicLD
+    -1001692751821,  #ramsupport
+    -1001459812644,  #geezsupport
 ]
 
 
