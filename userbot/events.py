@@ -206,7 +206,7 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**Kay-Userbot ERROR**\n"
-                    link = "Silahkan chat: @IDnyaKosong"
+                    link = "Silahkan chat: @Kayzuuuuu"
                     text += "Untuk melaporkan kesalahan"
                     text += f"tinggal teruskan pesan ini {link}.\n"
                     text += "Kay Siap Membantu Kamu\n"
