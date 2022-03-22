@@ -436,7 +436,7 @@ except Exception as e:
 
 async def checking():
     gocheck = str(pybase64.b64decode("QEtheXp1U3VwcG9ydA=="))[2:15]
-    checker = str(pybase64.b64decode("QGtheXp1Y2hhbm5lbA=="))[2:16]
+    checker = str(pybase64.b64decode("QEtheVhDaGFubmVs"))[2:16]
     try:
         await bot(GetSec(gocheck))
     except BaseException:
@@ -451,7 +451,7 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Join Support Group @KayzuSupport and Channel @kayzuchannel to see the updates of userbot"
+            "Join Support Group @KayzuSupport and Channel @KayXChannel to see the updates of userbot"
             "Don't Leave")
         quit(1)
 
@@ -758,13 +758,13 @@ with bot:
                 result = builder.article(
                     title="✨ ҡᴧʏ-υѕєявσт ✨",
                     description="Kay - Userbot | Telethon",
-                    url="https://t.me/kayzuchannel",
+                    url="https://t.me/KayXChannel",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**Kay-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @kayzuchannel\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Kay-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @KayXChannel\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
