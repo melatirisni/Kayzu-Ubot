@@ -24,6 +24,7 @@ GCAST_BLACKLIST = [
     -1001572486389,  # themusicLD
     -1001692751821,  # ramsupport
     -1001459812644,  # geezsupport
+    -1001551414840,  # mutualan
 ]
 
 
